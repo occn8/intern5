@@ -26,6 +26,15 @@
                     <h5>Student No</h5>
                 </th>
                 <th class="had">
+                    <h5>Year</h5>
+                </th>
+                <th class="had">
+                    <h5>Course</h5>
+                </th>
+                <th class="had">
+                    <h5>Semester</h5>
+                </th>
+                <th class="had">
                     <h5>Email</h5>
                 </th>
                 <th class="had">
@@ -43,6 +52,9 @@
                     <td class="had"><?php echo $student['username']; ?></td>
                     <td class="had"><?php echo $student['regnum']; ?></td>
                     <td class="had"><?php echo $student['studentnum']; ?></td>
+                    <td class="had"><?php echo $student['year']; ?></td>
+                    <td class="had"><?php echo $student['course']; ?></td>
+                    <td class="had"><?php echo $student['semester']; ?></td>
                     <td class="had"><?php echo $student['email']; ?></td>
                     <td class="had"><?php echo $student['regdate']; ?></td>
                     <td class="had"><?php echo $student['modified']; ?></td>

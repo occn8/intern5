@@ -12,7 +12,7 @@
                             <div class="row">
                                 <div class="col-md-4">
                                     <div class="form-group">
-                                        <label for="unit" class="white">Unit</label>
+                                        <label for="unit" class="text-black"><b>Unit</b></label>
                                         <select class="custom-select d-block w-100" name="unit" id="unit" required>
                                             <?php foreach ($courseunitsresult as $unit) : ?>
                                                 <option><?php echo $unit['name']; ?></option>
@@ -25,7 +25,7 @@
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-group">
-                                        <label for="tutor" class="white">tutor</label>
+                                        <label for="tutor" class="text-black"><b>Tutor</b></label>
                                         <select class="custom-select d-block w-100" name="tutor" id="tutor" required>
                                             <?php foreach ($coursetutorsresult as $tutor) : ?>
                                                 <option><?php echo $tutor['username']; ?></option>
@@ -38,9 +38,9 @@
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-group">
-                                        <label for="venue" class="white">Venue</label>
+                                        <label for="venue" class="text-black"><b>Venue</b></label>
                                         <select class="custom-select d-block w-100" name="venue" id="venue" required>
-                                            <?php foreach ($venueresult as $venue) : ?>
+                                            <?php foreach ($coursevenueresult as $venue) : ?>
                                                 <option><?php echo $venue['name']; ?></option>
                                             <?php endforeach; ?>
                                         </select>
@@ -51,7 +51,7 @@
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-group">
-                                        <label for="semester" class="white">Day</label>
+                                        <label for="semester" class="text-black"><b>Day</b></label>
                                         <select class="custom-select d-block w-100" name="day" id="day" required>
                                             <?php $days = array("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday");
                                             foreach ($days as $val) {
@@ -66,7 +66,7 @@
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-group">
-                                        <label for="semester" class="white">StartTime</label>
+                                        <label for="semester" class="text-black"><b>StartTime</b></label>
                                         <select class="custom-select d-block w-100" name="starttime" id="starttime" required>
                                             <?php $times = array("7:00", "8:00", "9:00", "10:00", "11:00", "12:00", "2:00", "3:00", "4:00", "5:00", "6:00");
                                             foreach ($times as $val) {
@@ -81,7 +81,7 @@
                                 </div>
                                 <!-- <div class="col-md-4">
                                     <div class="form-group">
-                                        <label for="semester" class="white">EndTime</label>
+                                        <label for="semester" class="text-black">EndTime</label>
                                         <select class="custom-select d-block w-100" name="endtime" id="endtime" required>
                                             <option>7:00</option>
                                         </select>

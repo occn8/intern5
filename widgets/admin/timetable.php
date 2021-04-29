@@ -591,7 +591,7 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <label for="course" class="white"><b>Course</b></label>
+                                        <label for="course" class="text-black"><b>Course</b></label>
                                         <select class="custom-select d-block w-100" name="course" id="course" required>
                                             <?php foreach ($courseresult as $course) : ?>
                                                 <option><?php echo $course['name']; ?></option>
@@ -604,7 +604,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="yearofstudy" class="white">Year of study</label>
+                                        <label for="yearofstudy" class="text-black"><b>Year of study</b></label>
                                         <select class="custom-select d-block w-100" name="yearofstudy" id="yearofstudy" required>
                                             <option>One</option>
                                             <option>Two</option>
@@ -617,7 +617,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="semester" class="white">Semester</label>
+                                        <label for="semester" class="text-black"><b>Semester</b></label>
                                         <select class="custom-select d-block w-100" name="semester" id="semester" required>
                                             <option>One</option>
                                             <option>Two</option>

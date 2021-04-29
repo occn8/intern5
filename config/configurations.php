@@ -506,6 +506,12 @@ if ($result->num_rows > 0) {
 } else {
 }
 
+$querrycoursevenue = "SELECT * FROM venue WHERE course='$currentcourse'";
+$coursevenueresult = $connect->query($querrycoursevenue);
+if ($result->num_rows > 0) {
+} else {
+}
+
 $querryvenue = "SELECT * FROM venue";
 $venueresult = $connect->query($querryvenue);
 if ($result->num_rows > 0) {
