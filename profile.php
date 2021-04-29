@@ -7,95 +7,337 @@ include('widgets/header.php');
 require_once('config/user_detail.php');
 
 ?>
-<main>
-    <?php if ($_SESSION['id'] == "admin") : ?>
-
-
-    <?php elseif ($_SESSION['id'] == "tutor") : ?>
-
-
-    <?php else : ?>
-
-
-    <?php endif ?>
-
-    <div class="container py-4">
-        <form class="needs-validation" method="post" action="profile.php" novalidate>
-            <?php include('config/errors.php'); ?>
-            <div class="row">
-                <div class="col-md-6 mb-3">
-                    <label for="firstName">First name</label>
-                    <input type="text" class="form-control" id="firstName" name="fname" placeholder="" value="<?php echo $firstname; ?>" required>
-                    <div class="invalid-feedback">
-                        Valid first name is required.
-                    </div>
-                </div>
-                <div class="col-md-6 mb-3">
-                    <label for="lastName">Last name</label>
-                    <input type="text" class="form-control" id="lastName" name="lname" placeholder="" value="<?php echo $lastname; ?>" required>
-                    <div class="invalid-feedback">
-                        Valid last name is required.
-                    </div>
-                </div>
+<div class="modal fade" id="profile" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel"><b>Edit Profile</b></h5>
+                <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
             </div>
+            <div class="modal-body">
+                <div class="pt-5"></div>
+                <?php if ($_SESSION['id'] == "admin") : ?>
+                    <div class="container">
+                        <form method="post" action="index.php" class="needs-validation" novalidate>
+                            <?php include('config/errors.php'); ?>
+                            <div class="container">
 
-            <div class="mb-3">
-                <label for="email">Email </label>
-                <input type="email" class="form-control" id="email" name="email" value="<?php echo $email; ?>" placeholder="you@example.com">
-                <div class="invalid-feedback">
-                    Please enter a valid email address for shipping updates.
-                </div>
+                                <div class="">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label class="white" for="firstName">First name</label>
+                                                <input type="text" name="fname" class="form-control" id="firstName" value="<?php echo $firstname; ?>" required>
+                                                <div class="invalid-feedback">
+                                                    Valid first name is required.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label class="white" for="lastName">Last name</label>
+                                                <input type="text" name="lname" class="form-control" id="lastName" value="<?php echo $lastname; ?>" required>
+                                                <div class="invalid-feedback">
+                                                    Valid last name is required.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="uname" class="text-black">Username </label>
+                                                <input type="text" class="form-control" id="uname" name="username" placeholder="Username" value="<?php echo $username; ?>" required>
+                                                <div class="invalid-feedback">
+                                                    Valid username is required.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group ">
+                                                <label for="email" class="text-black">Email </label>
+                                                <input type="email" class="form-control" id="email" name="email" placeholder="Email" value="<?php echo $email; ?>" required>
+                                                <div class="invalid-feedback">
+                                                    Valid last Email is required.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <hr class="col-12">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label class="white">Old Password</label>
+                                                <input type="password" name="pass" class="form-control" value="<?php echo $pass; ?>" required>
+                                                <div class="invalid-feedback">
+                                                    Please enter valid Password.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label class="white"> New Password</label>
+                                                <input type="password" name="pass1" class="form-control" value="<?php echo $pass1; ?>" required>
+                                                <div class="invalid-feedback">
+                                                    Please enter valid Password.
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label class="white">Confirm password</label>
+                                                <input type="password" name="pass2" class="form-control" value="<?php echo $pass2; ?>" required>
+                                                <div class="invalid-feedback">
+                                                    Please enter valid Password.
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div><br>
+                                    <br>
+                                    <center>
+                                        <button class="btn btn-warning rounded-pill btn-block font-size-20 col-md-6" type="submit" name="save_profile"><b> Save Changes</b></button>
+                                    </center>
+                                </div>
+                        </form>
+                    </div>
+
+                <?php elseif ($_SESSION['id'] == "tutor") : ?>
+                    <div class="container">
+                        <form method="post" action="index.php" class="needs-validation" novalidate>
+                            <?php include('config/errors.php'); ?>
+                            <div class="container">
+
+                                <div class="">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label class="white" for="firstName">First name</label>
+                                                <input type="text" name="fname" class="form-control" id="firstName" value="<?php echo $firstname; ?>" required>
+                                                <div class="invalid-feedback">
+                                                    Valid first name is required.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label class="white" for="lastName">Last name</label>
+                                                <input type="text" name="lname" class="form-control" id="lastName" value="<?php echo $lastname; ?>" required>
+                                                <div class="invalid-feedback">
+                                                    Valid last name is required.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="uname" class="text-black">Username </label>
+                                                <input type="text" class="form-control" id="uname" name="username" placeholder="Username" value="<?php echo $username; ?>" required>
+                                                <div class="invalid-feedback">
+                                                    Valid username is required.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group ">
+                                                <label for="email" class="text-black">Email </label>
+                                                <input type="email" class="form-control" id="email" name="email" placeholder="Email" value="<?php echo $email; ?>" required>
+                                                <div class="invalid-feedback">
+                                                    Valid last Email is required.
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label for="course" class="white">Course</label>
+                                                <select class="custom-select d-block w-100" name="course" id="course" required>
+                                                    <?php foreach ($courseresult as $course) : ?>
+                                                        <option><?php echo $course['name']; ?></option>
+                                                    <?php endforeach; ?>
+                                                </select>
+                                                <div class="invalid-feedback">
+                                                    Valid course required.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label class="white">Phone</label>
+                                                <input type="text" name="phone" class="form-control" value="<?php echo $phone; ?>" required>
+                                                <div class="invalid-feedback">
+                                                    Please enter valid phone Number.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label class="white">Tutor No</label>
+                                                <input type="text" name="tutornum" class="form-control" value="<?php echo $tutornum; ?>" required>
+                                                <div class="invalid-feedback">
+                                                    Please enter valid Tutor Number.
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label class="white">Password</label>
+                                                <input type="password" name="pass1" class="form-control" value="<?php echo $pass1; ?>" required>
+                                                <div class="invalid-feedback">
+                                                    Please enter valid Password.
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label class="white">Confirm password</label>
+                                                <input type="password" name="pass2" class="form-control" value="<?php echo $pass2; ?>" required>
+                                                <div class="invalid-feedback">
+                                                    Please enter valid Password.
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div><br>
+                                    <br>
+                                    <center>
+                                        <button class="btn btn-warning rounded-pill btn-block font-size-20 col-md-6" type="submit" name="save_profile"><b> Save Changes</b></button>
+                                    </center>
+                                </div>
+                        </form>
+                    </div>
+
+                <?php else : ?>
+                    <div class="container py-4">
+                        <form class="needs-validation" method="post" action="index.php" novalidate>
+                            <?php include('config/errors.php'); ?>
+                            <div class="row">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="text-black" for="firstName">First name</label>
+                                            <input type="text" name="fname" class="form-control" id="firstName" value="<?php echo $firstname; ?>" required>
+                                            <div class="invalid-feedback">
+                                                Valid first name is required.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="text-black" for="lastName">Last name</label>
+                                            <input type="text" name="lname" class="form-control" id="lastName" value="<?php echo $lastname; ?>" required>
+                                            <div class="invalid-feedback">
+                                                Valid last name is required.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="uname" class="text-black">Username </label>
+                                            <input type="text" class="form-control" id="uname" name="username" placeholder="Username" value="<?php echo $username; ?>" disabled required>
+                                            <div class="invalid-feedback">
+                                                Valid username is required.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group ">
+                                            <label for="email" class="text-black">Email </label>
+                                            <input type="email" class="form-control" id="email" name="email" placeholder="Email" value="<?php echo $email; ?>" disabled required>
+                                            <div class="invalid-feedback">
+                                                Valid last Email is required.
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-5">
+                                        <div class="form-group">
+                                            <label class="text-black">Registration No</label>
+                                            <input type="text" name="regnum" class="form-control" value="<?php echo $regnum; ?>" required>
+                                            <div class="invalid-feedback">
+                                                Please enter valid Registration Number.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-5">
+                                        <div class="form-group">
+                                            <label class="text-black">Student No</label>
+                                            <input type="text" name="studentnum" class="form-control" value="<?php echo $studentnum; ?>" required>
+                                            <div class="invalid-feedback">
+                                                Please enter valid Student Number.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-5">
+                                        <div class="form-group">
+                                            <label for="course" class="text-black"><b>Course</b></label>
+                                            <select class="custom-select d-block w-100" name="course" id="course" required>
+                                                <?php foreach ($courseresult as $course) : ?>
+                                                    <option><?php echo $course['name']; ?></option>
+                                                <?php endforeach; ?>
+                                            </select>
+                                            <div class="invalid-feedback">
+                                                Valid course required.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label for="country" class="text-black">Year</label>
+                                            <select class="custom-select d-block w-100" name="year" id="year" required>
+                                                <option>One</option>
+                                                <option>Two</option>
+                                                <option>Three</option>
+                                            </select>
+                                            <div class="invalid-feedback">
+                                                Please select a valid Year.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label for="country" class="text-black">Semester</label>
+                                            <select class="custom-select d-block w-100" name="semester" id="semester" required>
+                                                <option>One</option>
+                                                <option>Two</option>
+                                            </select>
+                                            <div class="invalid-feedback">
+                                                Please select a valid Semester.
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="text-black">Password</label>
+                                            <input type="password" name="pass1" class="form-control" value="<?php echo $pass1; ?>" required>
+                                            <div class="invalid-feedback">
+                                                Please enter valid Password.
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="text-black">Confirm password</label>
+                                            <input type="password" name="pass2" class="form-control" value="<?php echo $pass2; ?>" required>
+                                            <div class="invalid-feedback">
+                                                Please enter valid Password.
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div><br>
+                            </div><br>
+                            <center>
+                                <button class="btn btn-warning rounded-pill btn-block font-size-20 col-md-6" type="submit" name="save_profile"><b> Save Changes</b></button>
+                            </center>
+                        </form>
+                    </div>
+
+                <?php endif ?>
+
+
             </div>
-
-            <div class="mb-3">
-                <label for="address">Address</label>
-                <input type="text" class="form-control" id="address" name="address" value="<?php echo $address; ?>" placeholder="luwum Main St" required>
-                <div class="invalid-feedback">
-                    Please enter your shipping address.
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-md-5 mb-3">
-                    <label for="country">Country</label>
-                    <select class="custom-select d-block w-100" id="country" name="country" required>
-                        <option value="<?php echo $country; ?>"><?php echo $country; ?></option>
-                        <option>Kenya</option>
-                        <option>Rwanda</option>
-                    </select>
-                    <div class="invalid-feedback">
-                        Please select a valid country.
-                    </div>
-                </div>
-                <div class="col-md-4 mb-3">
-                    <label for="state">District</label>
-                    <select class="custom-select d-block w-100" id="district" name="district" required>
-                        <option value="<?php echo $district; ?>"><?php echo $district; ?></option>
-                        <option>Kampala</option>
-                    </select>
-                    <div class="invalid-feedback">
-                        Please provide a valid district.
-                    </div>
-                </div>
-                <div class="col-md-3 mb-3">
-                    <label for="zip">Zip</label>
-                    <input type="text" class="form-control" id="zip" name="zip" placeholder="" value="<?php echo $zip; ?>" required>
-                    <div class="invalid-feedback">
-                        Zip code required.
-                    </div>
-                </div>
-            </div><br>
-            <center>
-                <button class="btn btn-warning rounded-pill btn-block font-size-20 col-md-6" type="submit" name="save_profile"><b> Save Changes</b></button>
-            </center>
-        </form>
+        </div>
     </div>
-
-
-</main>
-<script src="assets/scripts/validate.js"></script>
-
-<?php
-include('widgets/footer.php');
-include('widgets/footer_end.php');
-?>
+</div>

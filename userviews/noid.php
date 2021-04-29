@@ -21,6 +21,11 @@
                         </a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="#timetable">
+                            <i class="bx bxs-time-five color-primary pr-3"></i> Time Table
+                        </a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="#tutorials">
                             <i class="bx bxs-book-open color-primary pr-3"></i> Lectures
                         </a>
@@ -31,13 +36,8 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#timetable">
-                            <i class="bx bxs-time-five color-primary pr-3"></i> Time Table
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#timetable">
-                            <i class="bx bxs-report color-primary pr-3"></i> Reports
+                        <a class="nav-link" href="">
+                            <i class="bx bx-library color-primary pr-3"></i> Library
                         </a>
                     </li>
                     <li class="nav-item">
@@ -100,6 +100,10 @@
             ?>
 
             <?php
+            include('widgets/timetable.php');
+            ?>
+
+            <?php
             include('widgets/noid/lectures.php');
             ?>
 
@@ -107,9 +111,6 @@
             include('widgets/noid/courses.php');
             ?>
 
-            <?php
-            include('widgets/noid/timetable.php');
-            ?>
             <?php
             include('widgets/footer.php');
             ?>

@@ -15,10 +15,11 @@
     <link rel="stylesheet" type="text/css" href="assets/css/animate.css">
     <link rel="stylesheet" type="text/css" href="assets/css/hover-min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/mdb.min.css">
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.css" rel="stylesheet" /> -->
 
     <link rel="icon" href="assets/favicon.ico">
     <title>Uganda Martyrs University</title>
 </head>
 
 <body>
-    

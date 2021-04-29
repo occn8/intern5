@@ -24,7 +24,7 @@ include('widgets/header.php');
     <?php endif ?>
 <?php else : ?>
     <?php
-    include('userviews/noid.php');
+    include('sign_in.php');
     ?>
 <?php endif ?>
 

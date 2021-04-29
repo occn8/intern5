@@ -16,6 +16,9 @@
                     <h5>Venue code</h5>
                 </th>
                 <th class="had">
+                    <h5>Course</h5>
+                </th>
+                <th class="had">
                     <h5>Modified</h5>
                 </th>
             </tr>
@@ -24,6 +27,7 @@
                     <td class="had"><?php echo $venue['id']; ?></td>
                     <td class="had"><?php echo $venue['name']; ?></td>
                     <td class="had"><?php echo $venue['code']; ?></td>
+                    <td class="had"><?php echo $venue['course']; ?></td>
                     <td class="had"><?php echo $venue['modified']; ?></td>
                 </tr>
             <?php endforeach; ?>
@@ -41,20 +45,38 @@
         <form method="post" action="index.php" class="needs-validation" novalidate>
             <?php include('config/errors.php'); ?>
             <div class="container">
-
-                <div class="form-group ">
-                    <label for="" class="text-black"><b>Venue Name</b></label>
-                    <input type="textfield" class="form-control" id="" name="name" placeholder="Name" value="" required>
-                    <div class="invalid-feedback">
-                        Enter Valid Venue Name.
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group ">
+                            <label for="" class="text-black"><b>Venue Name</b></label>
+                            <input type="textfield" class="form-control" id="" name="name" placeholder="Name" value="" required>
+                            <div class="invalid-feedback">
+                                Enter Valid Venue Name.
+                            </div>
+                        </div>
                     </div>
-                </div>
 
-                <div class="form-group ">
-                    <label for="" class="text-black"><b> Venue Code</b> </label>
-                    <input type="textfield" class="form-control" id="" name="code" placeholder="Code" value="" required>
-                    <div class="invalid-feedback ">
-                        Enter Valid Venue code.
+                    <div class="col-md-4">
+                        <div class="form-group ">
+                            <label for="" class="text-black"><b> Venue Code</b> </label>
+                            <input type="textfield" class="form-control" id="" name="code" placeholder="Code" value="" required>
+                            <div class="invalid-feedback ">
+                                Enter Valid Venue code.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="course" class="text-black"><b>Course</b></label>
+                            <select class="custom-select d-block w-100" name="course" id="course" required>
+                                <?php foreach ($courseresult as $course) : ?>
+                                    <option><?php echo $course['name']; ?></option>
+                                <?php endforeach; ?>
+                            </select>
+                            <div class="invalid-feedback">
+                                Valid course required.
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <br>

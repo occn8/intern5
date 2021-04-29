@@ -1,5 +1,5 @@
 <div id="courses" class="container">
-<div class="heading mb-4 border-bottom">
+<div class="heading mb-4 border-bottom pt-2">
         <h2>All Courses</h2>
     </div>
 

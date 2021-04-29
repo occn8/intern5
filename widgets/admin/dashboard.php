@@ -4,13 +4,13 @@
 
     </div>
 </div>
-<div class="site-section  pb-0 py-2">
+<div class="site-section  pb-2 py-3">
     <div class="container">
         <div class="row align-items-stretch overlap">
             <div class="col-lg-8">
                 <div class="box h-100 card-light p-2 radi shadow">
                     <div class="d-flex align-items-center">
-                        <div class="img"><img src="assets/img5.png" class="img-fluid" alt="Image"></div>
+                        <!-- <div class="img"><img src="assets/img5.png" class="img-fluid" alt="Image"></div> -->
                         <div class="text pl-3">
                             <a href="#" class="category black">Lectures</a>
                             <h3><a href="#">Emerging Trends in IT</a></h3>
@@ -32,21 +32,21 @@
             <div class="col-lg-4">
                 <div class="box small h-100">
                     <div class="d-flex card-light align-items-center mb-2 p-2 radi shadow">
-                        <div class="img"><img src="assets/img1.jpg" width="200" class="img-fluid" alt="Image"></div>
+                        <!-- <div class="img"><img src="assets/img1.jpg" width="200" class="img-fluid" alt="Image"></div> -->
                         <div class="text pl-2">
                             <a href="" class="category black">Tutorial</a>
                             <h5><a href="">Data Warehousing</a></h5>
                         </div>
                     </div>
                     <div class="d-flex card-light align-items-center mb-2 p-2 radi shadow">
-                        <div class="img"><img src="assets/img1.jpg" width="180" class="img-fluid" alt="Image"></div>
+                        <!-- <div class="img"><img src="assets/img1.jpg" width="180" class="img-fluid" alt="Image"></div> -->
                         <div class="text pl-2">
                             <a href=" " class="category black">Tutorial</a>
                             <h5><a href="">Information Systems</a></h5>
                         </div>
                     </div>
                     <div class="d-flex card-light align-items-center p-2 radi shadow">
-                        <div class="img"><img src="assets/img1.jpg" width="180" class="img-fluid" alt="Image"></div>
+                        <!-- <div class="img"><img src="assets/img1.jpg" width="180" class="img-fluid" alt="Image"></div> -->
                         <div class="text pl-2">
                             <a href=" " class="category black">Tutorial</a>
                             <h5><a href=" ">E-commerce</a></h5>

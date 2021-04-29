@@ -25,6 +25,7 @@ if ($_SESSION['id'] == "admin") {
         $lastname = $row['lname'];
         $username = $row['username'];
         $phone = $row['phone'];
+        $course = $row['course'];
         $tutornum = $row['tutornum'];
         $email = $row['email'];
     } else {
@@ -46,11 +47,19 @@ if ($_SESSION['id'] == "admin") {
 if (isset($_POST['save_profile'])) {
     $fname = mysqli_real_escape_string($connect, $_POST['fname']);
     $lname = mysqli_real_escape_string($connect, $_POST['lname']);
-    $email = mysqli_real_escape_string($connect, $_POST['email']);
-    $address = mysqli_real_escape_string($connect, $_POST['address']);
-    $country = mysqli_real_escape_string($connect, $_POST['country']);
-    $district = mysqli_real_escape_string($connect, $_POST['district']);
-    $zip = mysqli_real_escape_string($connect, $_POST['zip']);
+    // $username = mysqli_real_escape_string($connect, $_POST['username']);
+    $regnum = mysqli_real_escape_string($connect, $_POST['regnum']);
+    $studentnum = mysqli_real_escape_string($connect, $_POST['studentnum']);
+    $year = mysqli_real_escape_string($connect, $_POST['year']);
+    $course = mysqli_real_escape_string($connect, $_POST['course']);
+    $semester = mysqli_real_escape_string($connect, $_POST['semester']);
+    // $email = mysqli_real_escape_string($connect, $_POST['email']);
+    $pass1 = mysqli_real_escape_string($connect, $_POST['pass1']);
+    $pass2 = mysqli_real_escape_string($connect, $_POST['pass2']);
+    $if_user_exist = "SELECT * FROM students WHERE username='$username'";
+    $if_exist_result = mysqli_query($connect, $if_user_exist);
+    $if_email_exist = "SELECT * FROM students WHERE email='$email'";
+    $if_email_result = mysqli_query($connect, $if_email_exist);
 
     if (empty($fname)) {
         array_push($errors, "First name is required!");
@@ -62,18 +71,29 @@ if (isset($_POST['save_profile'])) {
     if (empty($lname)) {
         array_push($errors, "Last name is required!");
     }
-    if (empty($email)) {
-        array_push($errors, "Email is required!");
+  
+    // if (mysqli_num_rows($if_exist_result) > 0) {
+    //     array_push($errors, "Sorry.. Username already taken!");
+    // }
+    // if (mysqli_num_rows($if_email_result) > 0) {
+    //     array_push($errors, "Sorry.. Email is already in Use!");
+    // }
+    // if (empty($email)) {
+    //     array_push($errors, "Email is required!");
+    // }
+    if (empty($pass1)) {
+        array_push($errors, "Password is required!");
     }
-    if (!preg_match("/[0-9]{4,5}$/", $zip)) {
-        array_push($errors, "Invalid Zip code!");
+    if ($pass1 != $pass2) {
+        array_push($errors, "Passwords do not match!");
     }
-    $uid = $_SESSION['id'];
-    if (count($errors) == 0) {
-        $query = "UPDATE users SET fname='$fname',lname='$lname',email='$email',modified=NOW(),address='$address',country='$country',district='$district',zip='$zip' WHERE id='$uid'";
 
+    if (count($errors) == 0) {
+        $username = $_SESSION['username'];
+        $password = md5($pass1);
+        $query = "UPDATE students SET fname='$fname',lname='$lname',regnum='$regnum',studentnum='$studentnum',year='$year',course='$course',semester='$semester',modified=NOW(),password='$password' WHERE username='$username'";
         mysqli_query($connect, $query);
 
-        header('location: profile.php');
+        header('location: index.php');
     }
 }

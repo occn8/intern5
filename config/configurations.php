@@ -40,6 +40,9 @@ $students = "CREATE TABLE IF NOT EXISTS students (
     username VARCHAR(30) NOT NULL,
 	regnum VARCHAR(30),
     studentnum VARCHAR(30),
+	year VARCHAR(30) NOT NULL,
+	course VARCHAR(50) NOT NULL,
+	semester VARCHAR(50) NOT NULL,
     email VARCHAR(50),
     regdate datetime NOT NULL,
 	modified datetime NOT NULL,
@@ -53,6 +56,7 @@ $tutors = "CREATE TABLE IF NOT EXISTS tutors (
     lname VARCHAR(30) NOT NULL,
     username VARCHAR(30) NOT NULL,
 	phone VARCHAR(20),
+	course VARCHAR(60) NOT NULL,
     tutornum VARCHAR(20),
     email VARCHAR(50),
     regdate datetime NOT NULL,
@@ -65,6 +69,7 @@ $units = "CREATE TABLE IF NOT EXISTS units (
 	id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(30) NOT NULL,
 	code VARCHAR(30) NOT NULL,
+	course VARCHAR(60) NOT NULL,
 	modified datetime NOT NULL
 		)";
 mysqli_query($connect, $units);
@@ -73,13 +78,14 @@ $venue = "CREATE TABLE IF NOT EXISTS venue (
 	id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(30) NOT NULL,
 	code VARCHAR(30) NOT NULL,
+	course VARCHAR(60) NOT NULL,
 	modified datetime NOT NULL
 		)";
 mysqli_query($connect, $venue);
 
 $course = "CREATE TABLE IF NOT EXISTS course (
 	id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(30) NOT NULL,
+    name VARCHAR(60) NOT NULL,
 	faculty VARCHAR(30) NOT NULL,
 	modified datetime NOT NULL
 		)";
@@ -119,6 +125,9 @@ if (isset($_POST['register_student'])) {
 	$username = mysqli_real_escape_string($connect, $_POST['username']);
 	$regnum = mysqli_real_escape_string($connect, $_POST['regnum']);
 	$studentnum = mysqli_real_escape_string($connect, $_POST['studentnum']);
+	$year = mysqli_real_escape_string($connect, $_POST['year']);
+	$course = mysqli_real_escape_string($connect, $_POST['course']);
+	$semester = mysqli_real_escape_string($connect, $_POST['semester']);
 	$email = mysqli_real_escape_string($connect, $_POST['email']);
 	$pass1 = mysqli_real_escape_string($connect, $_POST['pass1']);
 	$pass2 = mysqli_real_escape_string($connect, $_POST['pass2']);
@@ -159,8 +168,8 @@ if (isset($_POST['register_student'])) {
 	if (count($errors) == 0) {
 		$sid = "stud";
 		$password = md5($pass1);
-		$query = "INSERT INTO students (fname, lname, username, regnum, studentnum, email, regdate, modified, password) 
-					  VALUES('$fname','$lname', '$username', '$regnum', '$studentnum', '$email', NOW(), NOW(), '$password')";
+		$query = "INSERT INTO students (fname, lname, username, regnum, studentnum, year, course, semester, email, regdate, modified, password) 
+					  VALUES('$fname','$lname', '$username', '$regnum', '$studentnum', '$year', '$course', '$semester', '$email', NOW(), NOW(), '$password')";
 		mysqli_query($connect, $query);
 		$_SESSION['username'] = $username;
 		$_SESSION['id'] = $sid;
@@ -179,6 +188,9 @@ if (isset($_POST['add_student'])) {
 	$username = mysqli_real_escape_string($connect, $_POST['username']);
 	$regnum = mysqli_real_escape_string($connect, $_POST['regnum']);
 	$studentnum = mysqli_real_escape_string($connect, $_POST['studentnum']);
+	$year = mysqli_real_escape_string($connect, $_POST['year']);
+	$course = mysqli_real_escape_string($connect, $_POST['course']);
+	$semester = mysqli_real_escape_string($connect, $_POST['semester']);
 	$email = mysqli_real_escape_string($connect, $_POST['email']);
 	$pass1 = mysqli_real_escape_string($connect, $_POST['pass1']);
 	$pass2 = mysqli_real_escape_string($connect, $_POST['pass2']);
@@ -219,8 +231,8 @@ if (isset($_POST['add_student'])) {
 	if (count($errors) == 0) {
 		$sid = "stud";
 		$password = md5($pass1);
-		$query = "INSERT INTO students (fname, lname, username, regnum, studentnum, email, regdate, modified, password) 
-					  VALUES('$fname','$lname', '$username', '$regnum', '$studentnum', '$email', NOW(), NOW(), '$password')";
+		$query = "INSERT INTO students (fname, lname, username, regnum, studentnum, year, course, semester, email, regdate, modified, password) 
+					  VALUES('$fname','$lname', '$username', '$regnum', '$studentnum', '$year', '$course', '$semester', '$email', NOW(), NOW(), '$password')";
 		mysqli_query($connect, $query);
 
 		header('location: index.php#students');
@@ -232,6 +244,7 @@ if (isset($_POST['register_tutor'])) {
 	$lname = mysqli_real_escape_string($connect, $_POST['lname']);
 	$username = mysqli_real_escape_string($connect, $_POST['username']);
 	$phone = mysqli_real_escape_string($connect, $_POST['phone']);
+	$course = mysqli_real_escape_string($connect, $_POST['course']);
 	$tutornum = mysqli_real_escape_string($connect, $_POST['tutornum']);
 	$email = mysqli_real_escape_string($connect, $_POST['email']);
 	$pass1 = mysqli_real_escape_string($connect, $_POST['pass1']);
@@ -273,8 +286,8 @@ if (isset($_POST['register_tutor'])) {
 	if (count($errors) == 0) {
 		$sid = "tutor";
 		$password = md5($pass1);
-		$query = "INSERT INTO tutors (fname, lname, username, phone, tutornum, email, regdate,modified, password) 
-					  VALUES('$fname','$lname', '$username', '$phone', '$tutornum', '$email', NOW(),NOW(), '$password')";
+		$query = "INSERT INTO tutors (fname, lname, username, phone, course, tutornum, email, regdate,modified, password) 
+					  VALUES('$fname','$lname', '$username', '$phone', '$course', '$tutornum', '$email', NOW(),NOW(), '$password')";
 		mysqli_query($connect, $query);
 
 		header('location: index.php#tutors');
@@ -355,9 +368,15 @@ if (isset($_POST['signin_user'])) {
 		if (mysqli_num_rows($results1) == 1) {
 			$row = mysqli_fetch_assoc($results1);
 			$username = $row['username'];
+			$course = $row['course'];
+			$yearofstudy = $row['year'];
+			$semester = $row['semester'];
 			$sid = "stud";
 			$_SESSION['username'] = $username;
 			$_SESSION['id'] = $sid;
+			$_SESSION['currentcourse'] = $course;
+			$_SESSION['yearofstudy'] = $yearofstudy;
+			$_SESSION['semester'] = $semester;
 			setcookie('user', $username, time() + (86400 * 2), "/");
 			header('location: index.php');
 		}
@@ -474,6 +493,18 @@ $unitsresult = $connect->query($querryunits);
 if ($result->num_rows > 0) {
 } else {
 }
+// $_SESSION['currentcourse'] = 'computer science';
+$currentcourse = $_SESSION['currentcourse'];
+$querrycourseunits = "SELECT * FROM units WHERE course='$currentcourse'";
+$courseunitsresult = $connect->query($querrycourseunits);
+if ($result->num_rows > 0) {
+} else {
+}
+$querrycoursetutors = "SELECT * FROM tutors WHERE course='$currentcourse'";
+$coursetutorsresult = $connect->query($querrycoursetutors);
+if ($result->num_rows > 0) {
+} else {
+}
 
 $querryvenue = "SELECT * FROM venue";
 $venueresult = $connect->query($querryvenue);
@@ -481,8 +512,8 @@ if ($result->num_rows > 0) {
 } else {
 }
 
-$querrylectures = "SELECT * FROM lectures";
-$lecturesresult = $connect->query($querrylectures);
+$querrytimetable = "SELECT * FROM timetable";
+$timetableresult = $connect->query($querrytimetable);
 if ($result->num_rows > 0) {
 } else {
 }
@@ -492,6 +523,7 @@ $courseresult = $connect->query($querrycourse);
 if ($result->num_rows > 0) {
 } else {
 }
+
 
 if (isset($_POST['delete_student'])) {
 	$studentnum = mysqli_real_escape_string($connect, $_POST['studentnum']);
@@ -561,6 +593,8 @@ if (isset($_POST['delete_course'])) {
 if (isset($_POST['add_unit'])) {
 	$name = mysqli_real_escape_string($connect, $_POST['name']);
 	$code = mysqli_real_escape_string($connect, $_POST['code']);
+	$course = mysqli_real_escape_string($connect, $_POST['course']);
+
 	if (empty($name)) {
 		array_push($errors, "Name required");
 	}
@@ -569,8 +603,8 @@ if (isset($_POST['add_unit'])) {
 	}
 
 	if (count($errors) == 0) {
-		$query = "INSERT INTO units (name, code, modified) 
-					  VALUES('$name', '$code',NOW())";
+		$query = "INSERT INTO units (name, code, course, modified) 
+					  VALUES('$name', '$code', '$course', NOW())";
 		mysqli_query($connect, $query);
 		header('location: index.php#units');
 	}
@@ -590,6 +624,8 @@ if (isset($_POST['delete_unit'])) {
 if (isset($_POST['add_venue'])) {
 	$name = mysqli_real_escape_string($connect, $_POST['name']);
 	$code = mysqli_real_escape_string($connect, $_POST['code']);
+	$course = mysqli_real_escape_string($connect, $_POST['course']);
+
 	if (empty($name)) {
 		array_push($errors, "Name required");
 	}
@@ -598,8 +634,8 @@ if (isset($_POST['add_venue'])) {
 	}
 
 	if (count($errors) == 0) {
-		$query = "INSERT INTO venue (name, code, modified) 
-					  VALUES('$name', '$code',NOW())";
+		$query = "INSERT INTO venue (name, code, course, modified) 
+					  VALUES('$name', '$code', '$course', NOW())";
 		mysqli_query($connect, $query);
 		header('location: index.php#venues');
 	}
@@ -620,15 +656,36 @@ if (isset($_POST['delete_venue'])) {
 if (isset($_POST['add_lecture'])) {
 	$unit = mysqli_real_escape_string($connect, $_POST['unit']);
 	$venue = mysqli_real_escape_string($connect, $_POST['venue']);
-	$yearofstudy = mysqli_real_escape_string($connect, $_POST['yearofstudy']);
-	$semester = mysqli_real_escape_string($connect, $_POST['semester']);
-	$course = mysqli_real_escape_string($connect, $_POST['course']);
+	$yearofstudy = $_SESSION['yearofstudy'];
+	$semester = $_SESSION['semester'];
+	$course = $_SESSION['currentcourse'];
 	$day = mysqli_real_escape_string($connect, $_POST['day']);
 	$starttime = mysqli_real_escape_string($connect, $_POST['starttime']);
 	$endtime = mysqli_real_escape_string($connect, $_POST['endtime']);
 	$tutor = mysqli_real_escape_string($connect, $_POST['tutor']);
-	if (empty($unit)) {
-		array_push($errors, "Title required");
+	$if_exist = "SELECT * FROM timetable WHERE day in ('$day') AND starttime='$starttime'";
+	$if_result = mysqli_query($connect, $if_exist);
+	// $if_exist2 = "SELECT * FROM timetable WHERE day='$day'";
+	// $if_result2 = mysqli_query($connect, $if_exist2);
+	// foreach ($timetableresult as $lect) {
+	// 	if ($lect['yearofstudy'] == $_SESSION['yearofstudy'] && $lect['semester'] == $_SESSION['semester'] && $lect['day'] == 'Monday' && $lect['starttime'] == $day) {
+	// 		array_push($errors, "Time slot already taken");
+	// 	}
+	// }
+	if (empty($yearofstudy || $currentcourse || $semester)) {
+		array_push($errors, "Fields required");
+	}
+	if (mysqli_num_rows($if_result) > 0) {
+
+		// $row = mysqli_fetch_assoc($aresults);
+		// $course = $row['course'];
+		// $yearofstudy = $row['yearofstudy'];
+		// $semester = $row['semester'];
+		// $starttimes = $row['starttime'];
+		// $days = $row['day'];
+		// if ($days==$day) {
+		// array_push($errors, "Time slot already taken");
+		// }
 	}
 
 	if (count($errors) == 0) {
@@ -637,6 +694,7 @@ if (isset($_POST['add_lecture'])) {
 		mysqli_query($connect, $query);
 		header('location: index.php#timetable');
 	}
+	header('location: index.php#timetable');
 }
 
 if (isset($_POST['update_lecture'])) {
@@ -673,3 +731,17 @@ if (isset($_POST['delete_lecture'])) {
 		header('location: index.php#timetable');
 	}
 }
+
+if (isset($_POST['select_course'])) {
+	$course = mysqli_real_escape_string($connect, $_POST['course']);
+	$yearofstudy = mysqli_real_escape_string($connect, $_POST['yearofstudy']);
+	$semester = mysqli_real_escape_string($connect, $_POST['semester']);
+	$_SESSION['currentcourse'] = $course;
+	$_SESSION['yearofstudy'] = $yearofstudy;
+	$_SESSION['semester'] = $semester;
+	header('location: index.php#timetable');
+}
+
+// $_SESSION['currentcourse'] = 'computer science';
+// $_SESSION['yearofstudy'] = 'One';
+// $_SESSION['semester'] = 'One';

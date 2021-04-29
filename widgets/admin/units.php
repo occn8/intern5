@@ -16,6 +16,9 @@
                     <h5>Unit code</h5>
                 </th>
                 <th class="had">
+                    <h5>Course</h5>
+                </th>
+                <th class="had">
                     <h5>Modified</h5>
                 </th>
             </tr>
@@ -24,6 +27,7 @@
                     <td class="had"><?php echo $unit['id']; ?></td>
                     <td class="had"><?php echo $unit['name']; ?></td>
                     <td class="had"><?php echo $unit['code']; ?></td>
+                    <td class="had"><?php echo $unit['course']; ?></td>
                     <td class="had"><?php echo $unit['modified']; ?></td>
                 </tr>
             <?php endforeach; ?>
@@ -41,20 +45,38 @@
         <form method="post" action="index.php" class="needs-validation" novalidate>
             <?php include('config/errors.php'); ?>
             <div class="container">
-
-                <div class="form-group ">
-                    <label for="" class="text-black"><b>Unit Name</b></label>
-                    <input type="textfield" class="form-control" id="" name="name" placeholder="Name" value="" required>
-                    <div class="invalid-feedback">
-                        Enter Valid unit Name.
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group ">
+                            <label for="" class="text-black"><b>Unit Name</b></label>
+                            <input type="textfield" class="form-control" id="" name="name" placeholder="Name" value="" required>
+                            <div class="invalid-feedback">
+                                Enter Valid unit Name.
+                            </div>
+                        </div>
                     </div>
-                </div>
 
-                <div class="form-group ">
-                    <label for="" class="text-black"><b> Unit Code</b> </label>
-                    <input type="textfield" class="form-control" id="" name="code" placeholder="Code" value="" required>
-                    <div class="invalid-feedback ">
-                        Enter Valid unit code.
+                    <div class="col-md-4">
+                        <div class="form-group ">
+                            <label for="" class="text-black"><b> Unit Code</b> </label>
+                            <input type="textfield" class="form-control" id="" name="code" placeholder="Code" value="" required>
+                            <div class="invalid-feedback ">
+                                Enter Valid unit code.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="course" class="text-black"><b>Course</b></label>
+                            <select class="custom-select d-block w-100" name="course" id="course" required>
+                                <?php foreach ($courseresult as $course) : ?>
+                                    <option><?php echo $course['name']; ?></option>
+                                <?php endforeach; ?>
+                            </select>
+                            <div class="invalid-feedback">
+                                Valid course required.
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <br>

@@ -8,7 +8,7 @@
                     echo "<h4 class=\" mr-0 px-3\"><i class=\"bx bxs-user-circle prim\"></i> umu student</h4>";
                 } else {
                     echo "<h4 class=\" mr-0 px-3\"><i class=\"bx bxs-user-circle prim\"></i> " . $_SESSION['username'] . "</h4>
-                    <a class=\"nav-link\" href=\"profile.php\"><h6 class=\"text-muted mr-0 px-3\"><i class=\"bx bxs-edit prim\"></i> Edit profile</h6></a>";
+                    <a class=\"nav-link\" data-mdb-toggle=\"modal\" data-mdb-target=\"#profile\"><h6 class=\"text-muted mr-0 px-3\"><i class=\"bx bxs-edit prim\"></i> Edit profile</h6></a>";
                 }
                 ?>
                 <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 pt-3 text-muted">
@@ -22,28 +22,18 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#tutorials">
-                            <i class="bx bxs-book-open color-primary pr-3"></i> Lectures
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#courses">
-                            <i class="bx bx-library color-primary pr-3"></i> Courses
-                        </a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link" href="#timetable">
                             <i class="bx bxs-time-five color-primary pr-3"></i> Time Table
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="">
-                            <i class="bx bxs-report color-primary pr-3"></i> Library
+                        <a class="nav-link" href="#tutorials">
+                            <i class="bx bxs-book-open color-primary pr-3"></i>My Lectures
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="">
-                            <i class="bx bxs-door-open color-primary pr-3"></i> student portal
+                        <a class="nav-link" href="#courses">
+                            <i class="bx bx-library color-primary pr-3"></i>My Courses
                         </a>
                     </li>
                 </ul>
@@ -67,6 +57,15 @@
                             <i class="bx bx-help-circle color-primary pr-3"></i> Contact Us
                         </a>
                     </li>
+                    <div class="mt-4">
+                        <?php
+                        if (!isset($_SESSION['username'])) {
+                        } else {
+                            echo "
+                                <a class=\" clr-bg nav-link\" href=\"index.php?logout='1'\"><i class=\"bx bxs-user-circle prim mr-1 bx-sm\"></i> <b><span class='prim'>Logout</span></b></a>
+                               ";
+                        }
+                        ?></div>
                 </ul>
             </div>
         </nav>
@@ -86,7 +85,7 @@
                                 <li class=\"nav-item ml-md-3\">";
                             } else {
                                 echo "
-                                <a class=\"btn clr-bg nav-link\" href=\"index.php?logout='1'\"><i class=\"bx bxs-user-circle color-primary mr-1 bx-sm\"></i> <b><span class='color-primary'>Logout</span></b></a>
+                                <a class=\" clr-bg nav-link\" href=\"index.php?logout='1'\"><i class=\"bx bxs-user-circle prim mr-1 bx-sm\"></i> <b><span class='color-primary'>Logout</span></b></a>
                                ";
                             }
                             ?>
@@ -101,6 +100,10 @@
             ?>
 
             <?php
+            include('widgets/timetable.php');
+            ?>
+
+            <?php
             include('widgets/student/lectures.php');
             ?>
 
@@ -109,11 +112,11 @@
             ?>
 
             <?php
-            include('widgets/student/timetable.php');
-            ?>
-            <?php
             include('widgets/footer.php');
             ?>
         </main>
     </div>
 </div>
+<?php
+include('profile.php');
+?>

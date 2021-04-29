@@ -67,7 +67,7 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label class="white" for="firstName">First name</label>
+                                <label class="text-black" for="firstName">First name</label>
                                 <input type="text" name="fname" class="form-control" id="firstName" value="<?php echo $fname; ?>" required>
                                 <div class="invalid-feedback">
                                     Valid first name is required.
@@ -76,14 +76,14 @@
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label class="white" for="lastName">Last name</label>
+                                <label class="text-black" for="lastName">Last name</label>
                                 <input type="text" name="lname" class="form-control" id="lastName" value="<?php echo $lname; ?>" required>
                                 <div class="invalid-feedback">
                                     Valid last name is required.
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-12">
+                        <div class="col-md-6">
                             <div class="form-group">
                                 <label for="uname" class="text-black">Username </label>
                                 <input type="text" class="form-control" id="uname" name="username" placeholder="Username" value="<?php echo $username; ?>" required>
@@ -92,7 +92,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-12">
+                        <div class="col-md-6">
                             <div class="form-group ">
                                 <label for="email" class="text-black">Email </label>
                                 <input type="email" class="form-control" id="email" name="email" placeholder="Email" value="<?php echo $email; ?>" required>
@@ -102,42 +102,66 @@
                             </div>
                         </div>
 
-                        <div class="col-md-5">
+                        <div class="col-md-6">
                             <div class="form-group">
-                                <label class="white">Registration No</label>
+                                <label class="text-black">Registration No</label>
                                 <input type="text" name="regnum" class="form-control" value="<?php echo $regnum; ?>" required>
                                 <div class="invalid-feedback">
                                     Please enter valid Registration Number.
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-5">
+                        <div class="col-md-6">
                             <div class="form-group">
-                                <label class="white">Student No</label>
+                                <label class="text-black">Student No</label>
                                 <input type="text" name="studentnum" class="form-control" value="<?php echo $studentnum; ?>" required>
                                 <div class="invalid-feedback">
                                     Please enter valid Student Number.
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-2">
+                        <div class="col-md-5">
                             <div class="form-group">
-                                <label for="country" class="white">Year</label>
-                                <select class="custom-select d-block w-100" name="country" id="country" required>
+                                <label for="course" class="text-black"><b>Course</b></label>
+                                <select class="custom-select d-block w-100" name="course" id="course" required>
+                                    <?php foreach ($courseresult as $course) : ?>
+                                        <option><?php echo $course['name']; ?></option>
+                                    <?php endforeach; ?>
+                                </select>
+                                <div class="invalid-feedback">
+                                    Valid course required.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label for="country" class="text-black">Year</label>
+                                <select class="custom-select d-block w-100" name="year" id="year" required>
                                     <option>One</option>
                                     <option>Two</option>
                                     <option>Three</option>
-                                    <option>Other</option>
                                 </select>
                                 <div class="invalid-feedback">
                                     Please select a valid Year.
                                 </div>
                             </div>
                         </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label for="country" class="text-black">Semester</label>
+                                <select class="custom-select d-block w-100" name="semester" id="semester" required>
+                                    <option>One</option>
+                                    <option>Two</option>
+                                </select>
+                                <div class="invalid-feedback">
+                                    Please select a valid Semester.
+                                </div>
+                            </div>
+                        </div>
 
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label class="white">Password</label>
+                                <label class="text-black">Password</label>
                                 <input type="password" name="pass1" class="form-control" value="<?php echo $pass1; ?>" required>
                                 <div class="invalid-feedback">
                                     Please enter valid Password.
@@ -147,7 +171,7 @@
 
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label class="white">Confirm password</label>
+                                <label class="text-black">Confirm password</label>
                                 <input type="password" name="pass2" class="form-control" value="<?php echo $pass2; ?>" required>
                                 <div class="invalid-feedback">
                                     Please enter valid Password.
@@ -181,7 +205,7 @@
                     <label for="" class="white"><b>Enter Student Number:</b></label>
                     <input type="text" name="studentnum" class="form-control mb-3" required>
                     <div class="invalid-feedback">
-                    Please Enter Valid Student Number.
+                        Please Enter Valid Student Number.
                     </div>
                 </div>
                 <button type="submit" class="btn btn-danger col-md-4 rounded-pill" name="delete_student">Delete Student</button>

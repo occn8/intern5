@@ -7,7 +7,8 @@
                 if (!isset($_SESSION['username'])) {
                     echo "<h4 class=\" mr-0 px-3\"><i class=\"bx bxs-user-circle prim\"></i> umu student</h4>";
                 } else {
-                    echo "<h4 class=\" mr-0 px-3\"><i class=\"bx bxs-user-circle prim\"></i> A " . $_SESSION['username'] . "</h4>";
+                    echo "<h4 class=\" mr-0 px-3\"><i class=\"bx bxs-user-circle prim\"></i> " . $_SESSION['username'] . "</h4>
+                    <a class=\"nav-link \" data-mdb-toggle=\"modal\" data-mdb-target=\"#profile\"><h6 class=\"text-muted mr-0 px-3\"><i class=\"bx bxs-edit prim\"></i> Edit profile</h6></a>";
                 }
                 ?>
                 <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 pt-3 text-muted">
@@ -61,7 +62,15 @@
                     </li>
 
                 </ul>
-
+                <div class="mt-2">
+                    <?php
+                    if (!isset($_SESSION['username'])) {
+                    } else {
+                        echo "
+                                <a class=\" clr-bg nav-link\" href=\"index.php?logout='1'\"><i class=\"bx bxs-user-circle prim mr-1 bx-sm\"></i> <b><span class='prim'>Logout</span></b></a>
+                               ";
+                    }
+                    ?></div>
             </div>
         </nav>
 
@@ -79,7 +88,7 @@
                                 <li class=\"nav-item ml-md-3\">";
                             } else {
                                 echo "
-                                <a class=\"btn clr-bg nav-link\" href=\"index.php?logout='1'\"><i class=\"bx bxs-user-circle prim mr-1 bx-sm\"></i> <b><span class='prim'>Logout</span></b></a>
+                                <a class=\" clr-bg nav-link\" href=\"index.php?logout='1'\"><i class=\"bx bxs-user-circle prim mr-1 bx-sm\"></i> <b><span class='prim'>Logout</span></b></a>
                                ";
                             }
                             ?>
@@ -127,3 +136,6 @@
         </main>
     </div>
 </div>
+<?php
+include('profile.php');
+?>

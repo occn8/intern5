@@ -63,7 +63,7 @@ require_once('config/configurations.php');
                     </div>
                 </div>
 
-                <div class="col-md-5">
+                <div class="col-md-6">
                     <div class="form-group">
                         <label class="white">Registration No</label>
                         <input type="text" name="regnum" class="form-control" value="<?php echo $regnum; ?>" required>
@@ -72,7 +72,7 @@ require_once('config/configurations.php');
                         </div>
                     </div>
                 </div>
-                <div class="col-md-5">
+                <div class="col-md-6">
                     <div class="form-group">
                         <label class="white">Student No</label>
                         <input type="text" name="studentnum" class="form-control" value="<?php echo $studentnum; ?>" required>
@@ -81,17 +81,41 @@ require_once('config/configurations.php');
                         </div>
                     </div>
                 </div>
-                <div class="col-md-2">
+                <div class="col-md-5">
+                    <div class="form-group">
+                        <label for="course" class="white"><b>Course</b></label>
+                        <select class="custom-select d-block w-100" name="course" id="course" required>
+                            <?php foreach ($courseresult as $course) : ?>
+                                <option><?php echo $course['name']; ?></option>
+                            <?php endforeach; ?>
+                        </select>
+                        <div class="invalid-feedback">
+                            Valid course required.
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
                     <div class="form-group">
                         <label for="country" class="white">Year</label>
-                        <select class="custom-select d-block w-100" name="country" id="country" required>
+                        <select class="custom-select d-block w-100" name="year" id="year" required>
                             <option>One</option>
                             <option>Two</option>
                             <option>Three</option>
-                            <option>Other</option>
                         </select>
                         <div class="invalid-feedback">
                             Please select a valid Year.
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label for="country" class="white">Semester</label>
+                        <select class="custom-select d-block w-100" name="semester" id="semester" required>
+                            <option>One</option>
+                            <option>Two</option>
+                        </select>
+                        <div class="invalid-feedback">
+                            Please select a valid Semester.
                         </div>
                     </div>
                 </div>
@@ -115,7 +139,7 @@ require_once('config/configurations.php');
                         </div>
                     </div>
                 </div>
-                
+
             </div><br>
 
             <center>

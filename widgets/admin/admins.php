@@ -59,7 +59,7 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label class="white" for="firstName">First name</label>
+                                <label class="text-black" for="firstName">First name</label>
                                 <input type="text" name="fname" class="form-control" id="firstName" value="<?php echo $fname; ?>" required>
                                 <div class="invalid-feedback">
                                     Valid first name is required.
@@ -68,14 +68,14 @@
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label class="white" for="lastName">Last name</label>
+                                <label class="text-black" for="lastName">Last name</label>
                                 <input type="text" name="lname" class="form-control" id="lastName" value="<?php echo $lname; ?>" required>
                                 <div class="invalid-feedback">
                                     Valid last name is required.
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-12">
+                        <div class="col-md-6">
                             <div class="form-group">
                                 <label for="uname" class="text-black">Username </label>
                                 <input type="text" class="form-control" id="uname" name="username" placeholder="Username" value="<?php echo $username; ?>" required>
@@ -84,7 +84,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-12">
+                        <div class="col-md-6">
                             <div class="form-group ">
                                 <label for="email" class="text-black">Email </label>
                                 <input type="email" class="form-control" id="email" name="email" placeholder="Email" value="<?php echo $email; ?>" required>
@@ -96,7 +96,7 @@
 
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label class="white">Password</label>
+                                <label class="text-black">Password</label>
                                 <input type="password" name="pass1" class="form-control" value="<?php echo $pass1; ?>" required>
                                 <div class="invalid-feedback">
                                     Please enter valid Password.
@@ -106,7 +106,7 @@
 
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label class="white">Confirm password</label>
+                                <label class="text-black">Confirm password</label>
                                 <input type="password" name="pass2" class="form-control" value="<?php echo $pass2; ?>" required>
                                 <div class="invalid-feedback">
                                     Please enter valid Password.
