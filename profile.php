@@ -45,7 +45,7 @@ require_once('config/user_detail.php');
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label for="uname" class="text-black font-weight-bold ">Username </label>
-                                                <input type="text" class="form-control" id="uname" name="username" placeholder="Username" value="<?php echo $username; ?>" required>
+                                                <input type="text" class="form-control" id="uname" name="username" placeholder="Username" value="<?php echo $username; ?>" disabled required>
                                                 <div class="invalid-feedback">
                                                     Valid username is required.
                                                 </div>
@@ -54,7 +54,7 @@ require_once('config/user_detail.php');
                                         <div class="col-md-6">
                                             <div class="form-group ">
                                                 <label for="email" class="text-black font-weight-bold ">Email </label>
-                                                <input type="email" class="form-control" id="email" name="email" placeholder="Email" value="<?php echo $email; ?>" required>
+                                                <input type="email" class="form-control" id="email" name="email" placeholder="Email" value="<?php echo $email; ?>" disabled required>
                                                 <div class="invalid-feedback">
                                                     Valid last Email is required.
                                                 </div>
@@ -128,7 +128,7 @@ require_once('config/user_detail.php');
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label for="uname" class="text-black font-weight-bold">Username </label>
-                                                <input type="text" class="form-control" id="uname" name="username" placeholder="Username" value="<?php echo $username; ?>" required>
+                                                <input type="text" class="form-control" id="uname" name="username" placeholder="Username" value="<?php echo $username; ?>" disabled required>
                                                 <div class="invalid-feedback">
                                                     Valid username is required.
                                                 </div>
@@ -137,7 +137,7 @@ require_once('config/user_detail.php');
                                         <div class="col-md-6">
                                             <div class="form-group ">
                                                 <label for="email" class="text-black font-weight-bold">Email </label>
-                                                <input type="email" class="form-control" id="email" name="email" placeholder="Email" value="<?php echo $email; ?>" required>
+                                                <input type="email" class="form-control" id="email" name="email" placeholder="Email" value="<?php echo $email; ?>" disabled required>
                                                 <div class="invalid-feedback">
                                                     Valid last Email is required.
                                                 </div>
