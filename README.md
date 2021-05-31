@@ -23,7 +23,7 @@ __`Admin Home screen`__
 <img src="assets/images/adminHome.png" />
 __`Student Home screen`__
 <img src="assets/images/studentHome.png" />
-__`tutor Home screen`__
+__`Tutor Home screen`__
 <img src="assets/images/tutorHome.png" />
 __`Sign In screen`__
 <img src="assets/images/signIn.png" />
@@ -37,6 +37,6 @@ __`Select Course screen`__
 <img src="assets/images/selectCourse.png" />
 __`Add Lecture screen`__
 <img src="assets/images/addLecture.png" />
-__`itemList screen`__
+__`Item List screen`__
 <img src="assets/images/itemList.png" />
 
