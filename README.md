@@ -19,6 +19,22 @@
 * [x] __Done__
 
 ### Screenshots
-<!-- __`Home screen`__
-<img src="assets/images/home.png" /> -->
+__`Admin Home screen`__
+<img src="assets/images/adminHome.png" />
+__`Student Home screen`__
+<img src="assets/images/studentHome.png" />
+__`Sign In screen`__
+<img src="assets/images/signIn.png" />
+__`Register screen`__
+<img src="assets/images/register.png" />
+__`Contact screen`__
+<img src="assets/images/contact.png" />
+__`Edit Profile screen`__
+<img src="assets/images/editProfile.png" />
+__`Select Course screen`__
+<img src="assets/images/selectCourse.png" />
+__`Add Lecture screen`__
+<img src="assets/images/addLecture.png" />
+__`itemList screen`__
+<img src="assets/images/itemList.png" />
 
