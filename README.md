@@ -23,6 +23,8 @@ __`Admin Home screen`__
 <img src="assets/images/adminHome.png" />
 __`Student Home screen`__
 <img src="assets/images/studentHome.png" />
+__`tutor Home screen`__
+<img src="assets/images/tutorHome.png" />
 __`Sign In screen`__
 <img src="assets/images/signIn.png" />
 __`Register screen`__
