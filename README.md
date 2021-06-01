@@ -8,7 +8,7 @@
   
   > [Atuhaire.christine](https://github.com/atuhaic)
 
-  > [Baguma.Blair](https://github.com/baguma-blair)
+  > [Baguma.Blair](https://github.com/bagumablair)
   > 
   > [Edeet.Emmanuel.James](https://github.com/Edeet-Emmanuel-James)
   
