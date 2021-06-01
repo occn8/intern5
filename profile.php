@@ -326,7 +326,7 @@ require_once('config/user_detail.php');
                                         </div>
                                     </div>
 
-                                </div><br>
+                               </div><br>
                             </div><br>
                             <center>
                                 <button class="btn btn-warning rounded-pill btn-block font-size-20 col-md-6" type="submit" name="save_profile"><b> Save Changes</b></button>
