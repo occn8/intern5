@@ -7,6 +7,7 @@
             </div>
             <div class="modal-body">
                 <form method="post" action="index.php" class="needs-validation" novalidate>
+                <?php include('config/errors.php'); ?>
                     <div class="container">
                         <div class="">
                             <div class="row">

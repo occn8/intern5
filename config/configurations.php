@@ -639,6 +639,7 @@ if (isset($_POST['add_venue'])) {
 	$course = mysqli_real_escape_string($connect, $_POST['course']);
 
 	if (empty($name)) {
+		echo "<script>alert('Conflict In time');</script>";
 		array_push($errors, "Name required");
 	}
 	if (empty($code)) {
@@ -675,30 +676,19 @@ if (isset($_POST['add_lecture'])) {
 	$starttime = mysqli_real_escape_string($connect, $_POST['starttime']);
 	$endtime = mysqli_real_escape_string($connect, $_POST['endtime']);
 	$tutor = mysqli_real_escape_string($connect, $_POST['tutor']);
-	$if_exist = "SELECT * FROM timetable WHERE day='$day' AND starttime='$starttime'";
+	$if_exist = "SELECT * FROM timetable WHERE day='$day' and starttime='$starttime'";
 	$if_result = mysqli_query($connect, $if_exist);
-	$if_exist2 = "SELECT * FROM timetable WHERE day='$day' or starttime='$starttime'";
-	$if_result2 = mysqli_query($connect, $if_exist2);
-	// foreach ($timetableresult as $lect) {
-	// 	if ($lect['yearofstudy'] == $_SESSION['yearofstudy'] && $lect['semester'] == $_SESSION['semester'] && $lect['day'] == 'Monday' && $lect['starttime'] == $day) {
-	// 		array_push($errors, "Time slot already taken");
-	// 	}
-	// }
+	
+	
+	if (empty($tutor)) {
+		echo "<script>alert('Get serious');</script>";
+		array_push($errors, "gwe required");
+	}
 	if (empty($yearofstudy || $currentcourse || $semester)) {
 		array_push($errors, "Fields required");
 	}
-	if (mysqli_num_rows($if_result2) > 0) {
-		echo "<script>alert('Product is already added in the cart..!')</script>";
-		echo "<script>window.location = 'index.php'</script>";
-		// $row = mysqli_fetch_assoc($aresults);
-		// $course = $row['course'];
-		// $yearofstudy = $row['yearofstudy'];
-		// $semester = $row['semester'];
-		// $starttimes = $row['starttime'];
-		// $days = $row['day'];
-		// if ($days==$day) {
+	if (mysqli_num_rows($if_result) > 0) {
 		array_push($errors, "Time slot already taken");
-		// }
 	}
 
 	if (count($errors) == 0) {
