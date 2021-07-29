@@ -7,7 +7,9 @@
   > [Allen.mabazi](https://github.com/Allenmabazi)
   
   > [Atuhaire.christine](https://github.com/atuhaic)
-  
+
+  > [Baguma.Blair](https://github.com/bagumablair)
+  > 
   > [Edeet.Emmanuel.James](https://github.com/Edeet-Emmanuel-James)
   
   > [tobias.ngabirano](https://github.com/tobiasngabirano5)
