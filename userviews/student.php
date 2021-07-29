@@ -11,7 +11,7 @@
                     <a class=\"nav-link\" data-mdb-toggle=\"modal\" data-mdb-target=\"#profile\"><h6 class=\"text-muted mr-0 px-3\"><i class=\"bx bxs-edit prim\"></i> Edit profile</h6></a>";
                 }
                 ?>
-                <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 pt-3 text-muted">
+                <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 pt-2 text-muted">
                     <span class="prim font-weight-bold"> home links</span>
                 </h6>
 
@@ -38,7 +38,7 @@
                     </li>
                 </ul>
 
-                <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 pt-3 text-muted">
+                <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 pt-2 text-muted">
                     <span class="prim font-weight-bold"> help | support | info</span>
                 </h6>
                 <ul class="nav flex-column mb-2">
@@ -57,7 +57,7 @@
                             <i class="bx bx-help-circle color-primary pr-3"></i> Contact Us
                         </a>
                     </li>
-                    <div class="mt-4">
+                    <div class="mt-3">
                         <?php
                         if (!isset($_SESSION['username'])) {
                         } else {

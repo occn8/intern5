@@ -11,7 +11,7 @@
                     <a class=\"nav-link \" data-mdb-toggle=\"modal\" data-mdb-target=\"#profile\"><h6 class=\"text-muted mr-0 px-3\"><i class=\"bx bxs-edit prim\"></i> Edit profile</h6></a>";
                 }
                 ?>
-                <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 pt-3 text-muted">
+                <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-3 mb-1 pt-2 text-muted">
                     <span class="prim font-weight-bold"> Content links</span>
                 </h6>
 
@@ -42,7 +42,7 @@
                             <i class="bx bxs-time-five prim pr-3"></i> Time Table
                         </a>
                     </li>
-                    <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 pt-3 text-muted">
+                    <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-3 mb-1 pt-2 text-muted">
                         <span class="prim font-weight-bold"> Users</span>
                     </h6>
                     <li class="nav-item">

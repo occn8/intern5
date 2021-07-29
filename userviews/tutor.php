@@ -11,7 +11,7 @@
                     <a class=\"nav-link\" data-mdb-toggle=\"modal\" data-mdb-target=\"#profile\"><h6 class=\"text-muted mr-0 px-3\"><i class=\"bx bxs-edit prim\"></i> Edit profile</h6></a>";
                 }
                 ?>
-                <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 pt-3 text-muted">
+                <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 pt-2 text-muted">
                     <span class="prim font-weight-bold"> home links</span>
                 </h6>
 
@@ -38,7 +38,7 @@
                     </li>
                 </ul>
 
-                <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 pt-3 text-muted">
+                <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 pt-2 text-muted">
                     <span class="prim font-weight-bold"> help | support | info</span>
                 </h6>
                 <ul class="nav flex-column mb-2">
@@ -58,7 +58,7 @@
                         </a>
                     </li>
                 </ul>
-                <div class="mt-5">
+                <div class="mt-4">
                     <?php
                     if (!isset($_SESSION['username'])) {
                     } else {
@@ -74,7 +74,7 @@
 
         <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-5">
 
-            <div id="none" class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-4 pb-3 mb-3 border-bottom">
+            <div id="none" class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-3 mb-3 border-bottom">
                 <input class="form-control form-control-dark w-50 align-self-start ml-1" type="text" placeholder="Search" aria-label="Search">
 
                 <button type="button" class="align-self-end btn py-0 btn-sm btn-outline-warning">
