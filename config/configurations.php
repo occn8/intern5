@@ -260,7 +260,7 @@ if (isset($_POST['register_tutor'])) {
 		array_push($errors, "First name is required!");
 	} else {
 		if (!preg_match("/[a-zA-Z]{3,30}$/", $fname)) {
-			array_push($errors, "Invalid First name!");
+			array_push($errors, "Invalid First name! ($fname)");
 		}
 	}
 	if (empty($lname)) {
@@ -270,10 +270,10 @@ if (isset($_POST['register_tutor'])) {
 		array_push($errors, "Username is required!");
 	}
 	if (mysqli_num_rows($if_exist_result) > 0) {
-		array_push($errors, "Sorry.. Username already taken!");
+		array_push($errors, "Sorry.. Username (username) already taken!");
 	}
 	if (mysqli_num_rows($if_email_result) > 0) {
-		array_push($errors, "Sorry.. Email is already in Use!");
+		array_push($errors, "Sorry.. Email ($email) is already in Use!");
 	}
 	if (empty($email)) {
 		array_push($errors, "Email is required!");
@@ -497,7 +497,9 @@ if ($result->num_rows > 0) {
 }
 // $_SESSION['currentcourse'] = 'computer science';
 $currentcourse = $_SESSION['currentcourse'];
-$querrycourseunits = "SELECT * FROM units WHERE course='$currentcourse'";
+$currentyr = $_SESSION['yearofstudy'];
+$currentsem = $_SESSION['semester'];
+$querrycourseunits = "SELECT * FROM units WHERE course='$currentcourse' and yearofstudy = '$currentyr' and semester='$currentsem' ;";
 $courseunitsresult = $connect->query($querrycourseunits);
 if ($result->num_rows > 0) {
 } else {

@@ -72,7 +72,7 @@
     <div class="mb-3 text-center">
 
         <form method="post" action="index.php" class="needs-validation" novalidate>
-            <?php include('config/errors.php'); ?>
+            <?php //include('config/errors.php'); ?>
             <div class="container">
 
                 <div class="">

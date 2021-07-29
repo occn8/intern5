@@ -1,3 +1,5 @@
+<?php include('config/errors.php'); ?>
+<br>
 <div id="Dashboard" class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-5 pb-2 mb-3 border-bottom">
     <h2 class="h2">My Dashboard</h2>
     <div class="">
