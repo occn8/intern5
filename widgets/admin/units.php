@@ -78,6 +78,31 @@
                             </div>
                         </div>
                     </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="yearofstudy" class="text-black"><b>Year of study</b></label>
+                            <select class="custom-select d-block w-100" name="yearofstudy" id="yearofstudy" required>
+                                <option>One</option>
+                                <option>Two</option>
+                                <option>Three</option>
+                            </select>
+                            <div class="invalid-feedback">
+                                Valid year of study required.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="semester" class="text-black"><b>Semester</b></label>
+                            <select class="custom-select d-block w-100" name="semester" id="semester" required>
+                                <option>One</option>
+                                <option>Two</option>
+                            </select>
+                            <div class="invalid-feedback">
+                                Valid semester required.
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <br>
                 <button type="submit" class="btn btn-warning col-md-4 rounded-pill" name="add_unit"><b>Add Unit</b></button>

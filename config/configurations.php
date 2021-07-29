@@ -70,6 +70,8 @@ $units = "CREATE TABLE IF NOT EXISTS units (
     name VARCHAR(30) NOT NULL,
 	code VARCHAR(30) NOT NULL,
 	course VARCHAR(60) NOT NULL,
+	yearofstudy VARCHAR(30) NOT NULL,
+	semester VARCHAR(30) NOT NULL,
 	modified datetime NOT NULL
 		)";
 mysqli_query($connect, $units);
@@ -600,6 +602,8 @@ if (isset($_POST['add_unit'])) {
 	$name = mysqli_real_escape_string($connect, $_POST['name']);
 	$code = mysqli_real_escape_string($connect, $_POST['code']);
 	$course = mysqli_real_escape_string($connect, $_POST['course']);
+	$yearofstudy = mysqli_real_escape_string($connect, $_POST['yearofstudy']);
+	$semester = mysqli_real_escape_string($connect, $_POST['semester']);
 
 	if (empty($name)) {
 		array_push($errors, "Name required");
@@ -609,8 +613,8 @@ if (isset($_POST['add_unit'])) {
 	}
 
 	if (count($errors) == 0) {
-		$query = "INSERT INTO units (name, code, course, modified) 
-					  VALUES('$name', '$code', '$course', NOW())";
+		$query = "INSERT INTO units (name, code, course, yearofstudy, semester, modified) 
+					  VALUES('$name', '$code', '$course', '$yearofstudy', '$semester', NOW())";
 		mysqli_query($connect, $query);
 		header('location: index.php#units');
 	}
@@ -669,10 +673,10 @@ if (isset($_POST['add_lecture'])) {
 	$starttime = mysqli_real_escape_string($connect, $_POST['starttime']);
 	$endtime = mysqli_real_escape_string($connect, $_POST['endtime']);
 	$tutor = mysqli_real_escape_string($connect, $_POST['tutor']);
-	$if_exist = "SELECT * FROM timetable WHERE day in ('$day') AND starttime='$starttime'";
+	$if_exist = "SELECT * FROM timetable WHERE day='$day' AND starttime='$starttime'";
 	$if_result = mysqli_query($connect, $if_exist);
-	// $if_exist2 = "SELECT * FROM timetable WHERE day='$day'";
-	// $if_result2 = mysqli_query($connect, $if_exist2);
+	$if_exist2 = "SELECT * FROM timetable WHERE day='$day' or starttime='$starttime'";
+	$if_result2 = mysqli_query($connect, $if_exist2);
 	// foreach ($timetableresult as $lect) {
 	// 	if ($lect['yearofstudy'] == $_SESSION['yearofstudy'] && $lect['semester'] == $_SESSION['semester'] && $lect['day'] == 'Monday' && $lect['starttime'] == $day) {
 	// 		array_push($errors, "Time slot already taken");
@@ -681,8 +685,9 @@ if (isset($_POST['add_lecture'])) {
 	if (empty($yearofstudy || $currentcourse || $semester)) {
 		array_push($errors, "Fields required");
 	}
-	if (mysqli_num_rows($if_result) > 0) {
-
+	if (mysqli_num_rows($if_result2) > 0) {
+		echo "<script>alert('Product is already added in the cart..!')</script>";
+		echo "<script>window.location = 'index.php'</script>";
 		// $row = mysqli_fetch_assoc($aresults);
 		// $course = $row['course'];
 		// $yearofstudy = $row['yearofstudy'];
@@ -690,7 +695,7 @@ if (isset($_POST['add_lecture'])) {
 		// $starttimes = $row['starttime'];
 		// $days = $row['day'];
 		// if ($days==$day) {
-		// array_push($errors, "Time slot already taken");
+		array_push($errors, "Time slot already taken");
 		// }
 	}
 
