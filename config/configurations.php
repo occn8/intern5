@@ -676,10 +676,11 @@ if (isset($_POST['add_lecture'])) {
 	$starttime = mysqli_real_escape_string($connect, $_POST['starttime']);
 	$endtime = mysqli_real_escape_string($connect, $_POST['endtime']);
 	$tutor = mysqli_real_escape_string($connect, $_POST['tutor']);
-	$if_exist = "SELECT * FROM timetable WHERE day='$day' and starttime='$starttime'";
-	$if_result = mysqli_query($connect, $if_exist);
-	
-	
+	$if_exist = "SELECT * FROM timetable WHERE yearofstudy='$yearofstudy' and semester='$semester' and course='$course' and day='$day' and starttime='$starttime'";
+	$if_result = mysqli_query($connect, $if_exist);//if time already allocated
+	$if_unit_overuse = "SELECT * FROM timetable WHERE yearofstudy='$yearofstudy' and semester='$semester' and course='$course' and unit='$unit'";
+	$if_result2 = mysqli_query($connect, $if_unit_overuse);// if unit has been allocated 3x
+
 	if (empty($tutor)) {
 		echo "<script>alert('Get serious');</script>";
 		array_push($errors, "gwe required");
@@ -688,7 +689,10 @@ if (isset($_POST['add_lecture'])) {
 		array_push($errors, "Fields required");
 	}
 	if (mysqli_num_rows($if_result) > 0) {
-		array_push($errors, "Time slot already taken");
+		array_push($errors, "Time slot ($day at $starttime) already taken");
+	}
+	if (mysqli_num_rows($if_result2) > 2) {
+		array_push($errors, "Course unit <b>($unit)</b> has already been allocated x3");
 	}
 
 	if (count($errors) == 0) {
@@ -697,7 +701,7 @@ if (isset($_POST['add_lecture'])) {
 		mysqli_query($connect, $query);
 		header('location: index.php#timetable');
 	}
-	header('location: index.php#timetable');
+	// header('location: index.php#timetable');
 }
 
 if (isset($_POST['update_lecture'])) {
