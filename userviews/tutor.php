@@ -99,99 +99,13 @@
             <?php
             include('widgets/tutor/dashboard.php');
             ?>
-            <div class="row pt-5">
-                <div class="col-md-4">
-                    <button type="button" class="btn px-2 btn-warning text-black" data-mdb-toggle="modal" data-mdb-target="#selectcoourse">
-                        Select Current Setting
-                    </button>
-                </div>
-                <div class="col-md-8 ">
-                    <h3 class="pt-0"><span>
-                            <b>Course: </b><?php if (isset($_SESSION['currentcourse'])) {
-                                                echo "<span class=\"prim shadow p-1\">" . $_SESSION['currentcourse'] . "</span>";
-                                            } else {
-                                                echo " None";
-                                            } ?>
-                            <b>Yr:</b> <?php if (isset($_SESSION['yearofstudy'])) {
-                                            echo "<span class=\"prim p-1\">" . $_SESSION['yearofstudy'] . "</span>";
-                                        } else {
-                                            echo " None";
-                                        } ?>
-                            <b>Sem: </b> <?php if (isset($_SESSION['semester'])) {
-                                                echo "<span class=\"prim p-1\">" . $_SESSION['semester'] . "</span>";
-                                            } else {
-                                                echo " None";
-                                            } ?>
-                        </span>
-                    </h3>
-                </div>
 
-                <div class="modal fade" id="selectcoourse" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Select Course</h5>
-                <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <form method="post" action="index.php" class="needs-validation" novalidate>
-                    <?php include('config/errors.php'); ?>
-                    <div class="container">
-                        <div class="">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <label for="course" class="white"><b>Course</b></label>
-                                        <select class="custom-select d-block w-100" name="course" id="course" required>
-                                            <?php foreach ($courseresult as $course) : ?>
-                                                <option><?php echo $course['name']; ?></option>
-                                            <?php endforeach; ?>
-                                        </select>
-                                        <div class="invalid-feedback">
-                                            Valid course required.
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="yearofstudy" class="white">Year of study</label>
-                                        <select class="custom-select d-block w-100" name="yearofstudy" id="yearofstudy" required>
-                                            <option>One</option>
-                                            <option>Two</option>
-                                            <option>Three</option>
-                                        </select>
-                                        <div class="invalid-feedback">
-                                            Valid year of study required.
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="semester" class="white">Semester</label>
-                                        <select class="custom-select d-block w-100" name="semester" id="semester" required>
-                                            <option>One</option>
-                                            <option>Two</option>
-                                        </select>
-                                        <div class="invalid-feedback">
-                                            Valid semester required.
-                                        </div>
-                                    </div>
-                                </div>
-                            </div><br>
-                            <br>
-                            <center>
-                                <button type="submit" class="btn btn-warning col-md-6 rounded-pill" name="select_course"><b>Select Course</b></button>
-                            </center>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
-            </div>
             <?php
             include('widgets/tutor/timetable.php');
+            ?>
+
+            <?php
+            include('widgets/tutor/timetable2.php');
             ?>
 
             <?php
