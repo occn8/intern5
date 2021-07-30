@@ -191,7 +191,7 @@
 </div>
             </div>
             <?php
-            include('widgets/timetable.php');
+            include('widgets/tutor/timetable.php');
             ?>
 
             <?php
