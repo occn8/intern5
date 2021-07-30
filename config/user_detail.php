@@ -40,6 +40,9 @@ if ($_SESSION['id'] == "admin") {
         $regnum = $row['regnum'];
         $studentnum = $row['studentnum'];
         $email = $row['email'];
+        $year = $row['year'];
+        $sem = $row['semester'];
+        $cors = $row['course'];
     } else {
     }
 }
@@ -170,6 +173,9 @@ if (isset($_POST['save_profile'])) {
         if (count($errors) == 0) {
             $username = $_SESSION['username'];
             $password = md5($pass1);
+            $_SESSION['currentcourse'] = $course;
+			$_SESSION['yearofstudy'] = $year;
+			$_SESSION['semester'] = $semester;
             $query = "UPDATE students SET fname='$fname',lname='$lname',regnum='$regnum',studentnum='$studentnum',year='$year',course='$course',semester='$semester',modified=NOW(),password='$password' WHERE username='$username'";
             mysqli_query($connect, $query);
 

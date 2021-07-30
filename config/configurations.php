@@ -680,6 +680,8 @@ if (isset($_POST['add_lecture'])) {
 	$if_result = mysqli_query($connect, $if_exist); //if time already allocated
 	$if_unit_overuse = "SELECT * FROM timetable WHERE yearofstudy='$yearofstudy' and semester='$semester' and course='$course' and unit='$unit'";
 	$if_result2 = mysqli_query($connect, $if_unit_overuse); // if unit has been allocated 3x
+	$if_unit_atutor = "SELECT * FROM timetable WHERE yearofstudy='$yearofstudy' and semester='$semester' and course='$course' and unit='$unit' and tutor!='$tutor'";
+	$if_result6 = mysqli_query($connect, $if_unit_atutor); // if unit has been allocated to 1 tutor
 	$if_tutor_unit = "SELECT * FROM timetable WHERE yearofstudy='$yearofstudy' and semester='$semester' and course='$course' and tutor='$tutor' and unit!='$unit'";
 	$if_result3 = mysqli_query($connect, $if_tutor_unit); // if tutor has been allocated more than 1 unit
 	$if_tutor_lecture = "SELECT * FROM timetable WHERE semester='$semester' and course='$course' and tutor='$tutor' and day='$day' and starttime='$starttime'";
@@ -699,6 +701,14 @@ if (isset($_POST['add_lecture'])) {
 	}
 	if (mysqli_num_rows($if_result2) > 2) {
 		array_push($errors, "Course unit <b>($unit)</b> has already been allocated x3");
+	}
+	if (mysqli_num_rows($if_result6) > 0) {
+		if ($if_result6->num_rows > 0) {
+			$row = mysqli_fetch_assoc($if_result6);
+			$tr = $row['tutor'];
+		} else {
+		}
+		array_push($errors, "Course unit <b>($unit)</b> has already been allocated to <b>($tr)</b>");
 	}
 	if (mysqli_num_rows($if_result3) > 0) {
 

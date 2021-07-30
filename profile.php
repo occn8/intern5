@@ -270,6 +270,7 @@ require_once('config/user_detail.php');
                                     <div class="col-md-5">
                                         <div class="form-group">
                                             <label for="course" class="text-black font-weight-bold"><b>Course</b></label>
+                                            <b>:<?php echo $cors ?></b>
                                             <select class="custom-select d-block w-100" name="course" id="course" required>
                                                 <?php foreach ($courseresult as $course) : ?>
                                                     <option><?php echo $course['name']; ?></option>
@@ -283,6 +284,7 @@ require_once('config/user_detail.php');
                                     <div class="col-md-3">
                                         <div class="form-group">
                                             <label for="country" class="text-black font-weight-bold">Year</label>
+                                            <b>:<?php echo $year ?></b>
                                             <select class="custom-select d-block w-100" name="year" id="year" required>
                                                 <option>One</option>
                                                 <option>Two</option>
@@ -296,6 +298,7 @@ require_once('config/user_detail.php');
                                     <div class="col-md-3">
                                         <div class="form-group">
                                             <label for="country" class="text-black font-weight-bold">Semester</label>
+                                            <b>:<?php echo $sem ?></b>
                                             <select class="custom-select d-block w-100" name="semester" id="semester" required>
                                                 <option>One</option>
                                                 <option>Two</option>
@@ -326,7 +329,7 @@ require_once('config/user_detail.php');
                                         </div>
                                     </div>
 
-                               </div><br>
+                                </div><br>
                             </div><br>
                             <center>
                                 <button class="btn btn-warning rounded-pill btn-block font-size-20 col-md-6" type="submit" name="save_profile"><b> Save Changes</b></button>
