@@ -178,7 +178,7 @@ if (isset($_POST['save_profile'])) {
 			$_SESSION['semester'] = $semester;
             $query = "UPDATE students SET fname='$fname',lname='$lname',regnum='$regnum',studentnum='$studentnum',year='$year',course='$course',semester='$semester',modified=NOW(),password='$password' WHERE username='$username'";
             mysqli_query($connect, $query);
-
+            
             header('location: index.php');
         }
     }
