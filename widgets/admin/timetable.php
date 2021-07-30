@@ -65,7 +65,7 @@
                     <td>
                         <?php foreach ($timetableresult as $lect) : ?>
                             <?php if ($lect['course'] == $_SESSION['currentcourse'] && $lect['yearofstudy'] == $_SESSION['yearofstudy'] && $lect['semester'] == $_SESSION['semester'] && $lect['day'] == 'Monday' && $lect['starttime'] == '07:00:00') {
-                                echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br>::" . $lect['venue'];
+                                echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br><hr>::" . $lect['tutor'] . "<br>::" . $lect['venue'];
                             } else {
                             }
                             ?>
@@ -74,7 +74,7 @@
                     <td>
                         <?php foreach ($timetableresult as $lect) : ?>
                             <?php if ($lect['course'] == $_SESSION['currentcourse'] && $lect['yearofstudy'] == $_SESSION['yearofstudy'] && $lect['semester'] == $_SESSION['semester'] && $lect['day'] == 'Monday' && $lect['starttime'] == '08:00:00') {
-                                echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br>::" . $lect['venue'];
+                                echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br><hr>::" . $lect['tutor'] . "<br>::" . $lect['venue'];
                             } else {
                             }
                             ?>
@@ -83,7 +83,7 @@
                     <td>
                         <?php foreach ($timetableresult as $lect) : ?>
                             <?php if ($lect['course'] == $_SESSION['currentcourse'] && $lect['yearofstudy'] == $_SESSION['yearofstudy'] && $lect['semester'] == $_SESSION['semester'] && $lect['day'] == 'Monday' && $lect['starttime'] == '09:00:00') {
-                                echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br>::" . $lect['venue'];
+                                echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br><hr>::" . $lect['tutor'] . "<br>::" . $lect['venue'];
                             } else {
                             }
                             ?>
@@ -92,7 +92,7 @@
                     <td>
                         <?php foreach ($timetableresult as $lect) : ?>
                             <?php if ($lect['course'] == $_SESSION['currentcourse'] && $lect['yearofstudy'] == $_SESSION['yearofstudy'] && $lect['semester'] == $_SESSION['semester'] && $lect['day'] == 'Monday' && $lect['starttime'] == '10:00:00') {
-                                echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br>::" . $lect['venue'];
+                                echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br><hr>::" . $lect['tutor'] . "<br>::" . $lect['venue'];
                             } else {
                             }
                             ?>
@@ -101,7 +101,7 @@
                     <td>
                         <?php foreach ($timetableresult as $lect) : ?>
                             <?php if ($lect['course'] == $_SESSION['currentcourse'] && $lect['yearofstudy'] == $_SESSION['yearofstudy'] && $lect['semester'] == $_SESSION['semester'] && $lect['day'] == 'Monday' && $lect['starttime'] == '11:00:00') {
-                                echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br>::" . $lect['venue'];
+                                echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br><hr>::" . $lect['tutor'] . "<br>::" . $lect['venue'];
                             } else {
                             }
                             ?>
@@ -110,7 +110,7 @@
                     <td>
                         <?php foreach ($timetableresult as $lect) : ?>
                             <?php if ($lect['course'] == $_SESSION['currentcourse'] && $lect['yearofstudy'] == $_SESSION['yearofstudy'] && $lect['semester'] == $_SESSION['semester'] && $lect['day'] == 'Monday' && $lect['starttime'] == '12:00:00') {
-                                echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br>::" . $lect['venue'];
+                                echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br><hr>::" . $lect['tutor'] . "<br>::" . $lect['venue'];
                             } else {
                             }
                             ?>
@@ -120,7 +120,7 @@
                     <td>
                         <?php foreach ($timetableresult as $lect) : ?>
                             <?php if ($lect['course'] == $_SESSION['currentcourse'] && $lect['yearofstudy'] == $_SESSION['yearofstudy'] && $lect['semester'] == $_SESSION['semester'] && $lect['day'] == 'Monday' && $lect['starttime'] == '02:00:00') {
-                                echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br>::" . $lect['venue'];
+                                echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br><hr>::" . $lect['tutor'] . "<br>::" . $lect['venue'];
                             } else {
                             }
                             ?>
@@ -130,7 +130,7 @@
                     <td>
                         <?php foreach ($timetableresult as $lect) : ?>
                             <?php if ($lect['course'] == $_SESSION['currentcourse'] && $lect['yearofstudy'] == $_SESSION['yearofstudy'] && $lect['semester'] == $_SESSION['semester'] && $lect['day'] == 'Monday' && $lect['starttime'] == '03:00:00') {
-                                echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br>::" . $lect['venue'];
+                                echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br><hr>::" . $lect['tutor'] . "<br>::" . $lect['venue'];
                             } else {
                             }
                             ?>
@@ -138,7 +138,7 @@
                     </td>
                     <td><?php foreach ($timetableresult as $lect) : ?>
                             <?php if ($lect['course'] == $_SESSION['currentcourse'] && $lect['yearofstudy'] == $_SESSION['yearofstudy'] && $lect['semester'] == $_SESSION['semester'] && $lect['day'] == 'Monday' && $lect['starttime'] == '04:00:00') {
-                                echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br>::" . $lect['venue'];
+                                echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br><hr>::" . $lect['tutor'] . "<br>::" . $lect['venue'];
                             } else {
                             }
                             ?>
@@ -147,7 +147,7 @@
                     <td>
                         <?php foreach ($timetableresult as $lect) : ?>
                             <?php if ($lect['course'] == $_SESSION['currentcourse'] && $lect['yearofstudy'] == $_SESSION['yearofstudy'] && $lect['semester'] == $_SESSION['semester'] && $lect['day'] == 'Monday' && $lect['starttime'] == '05:00:00') {
-                                echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br>::" . $lect['venue'];
+                                echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br><hr>::" . $lect['tutor'] . "<br>::" . $lect['venue'];
                             } else {
                             }
                             ?>
@@ -156,7 +156,7 @@
                     <td>
                         <?php foreach ($timetableresult as $lect) : ?>
                             <?php if ($lect['course'] == $_SESSION['currentcourse'] && $lect['yearofstudy'] == $_SESSION['yearofstudy'] && $lect['semester'] == $_SESSION['semester'] && $lect['day'] == 'Monday' && $lect['starttime'] == '06:00:00') {
-                                echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br>::" . $lect['venue'];
+                                echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br><hr>::" . $lect['tutor'] . "<br>::" . $lect['venue'];
                             } else {
                             }
                             ?>
@@ -168,42 +168,42 @@
                     <th><b>Tuesday</b></th>
                     <td> <?php foreach ($timetableresult as $lect) : ?>
                             <?php if ($lect['course'] == $_SESSION['currentcourse'] && $lect['yearofstudy'] == $_SESSION['yearofstudy'] && $lect['semester'] == $_SESSION['semester'] && $lect['day'] == 'Tuesday' && $lect['starttime'] == '07:00:00') {
-                                    echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br>::" . $lect['venue'];
+                                    echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br><hr>::" . $lect['tutor'] . "<br>::" . $lect['venue'];
                                 } else {
                                 }
                             ?>
                         <?php endforeach; ?></td>
                     <td> <?php foreach ($timetableresult as $lect) : ?>
                             <?php if ($lect['course'] == $_SESSION['currentcourse'] && $lect['yearofstudy'] == $_SESSION['yearofstudy'] && $lect['semester'] == $_SESSION['semester'] && $lect['day'] == 'Tuesday' && $lect['starttime'] == '08:00:00') {
-                                    echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br>::" . $lect['venue'];
+                                    echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br><hr>::" . $lect['tutor'] . "<br>::" . $lect['venue'];
                                 } else {
                                 }
                             ?>
                         <?php endforeach; ?></td>
                     <td> <?php foreach ($timetableresult as $lect) : ?>
                             <?php if ($lect['course'] == $_SESSION['currentcourse'] && $lect['yearofstudy'] == $_SESSION['yearofstudy'] && $lect['semester'] == $_SESSION['semester'] && $lect['day'] == 'Tuesday' && $lect['starttime'] == '09:00:00') {
-                                    echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br>::" . $lect['venue'];
+                                    echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br><hr>::" . $lect['tutor'] . "<br>::" . $lect['venue'];
                                 } else {
                                 }
                             ?>
                         <?php endforeach; ?></td>
                     <td> <?php foreach ($timetableresult as $lect) : ?>
                             <?php if ($lect['course'] == $_SESSION['currentcourse'] && $lect['yearofstudy'] == $_SESSION['yearofstudy'] && $lect['semester'] == $_SESSION['semester'] && $lect['day'] == 'Tuesday' && $lect['starttime'] == '10:00:00') {
-                                    echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br>::" . $lect['venue'];
+                                    echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br><hr>::" . $lect['tutor'] . "<br>::" . $lect['venue'];
                                 } else {
                                 }
                             ?>
                         <?php endforeach; ?> </td>
                     <td> <?php foreach ($timetableresult as $lect) : ?>
                             <?php if ($lect['course'] == $_SESSION['currentcourse'] && $lect['yearofstudy'] == $_SESSION['yearofstudy'] && $lect['semester'] == $_SESSION['semester'] && $lect['day'] == 'Tuesday' && $lect['starttime'] == '11:00:00') {
-                                    echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br>::" . $lect['venue'];
+                                    echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br><hr>::" . $lect['tutor'] . "<br>::" . $lect['venue'];
                                 } else {
                                 }
                             ?>
                         <?php endforeach; ?> </td>
                     <td> <?php foreach ($timetableresult as $lect) : ?>
                             <?php if ($lect['course'] == $_SESSION['currentcourse'] && $lect['yearofstudy'] == $_SESSION['yearofstudy'] && $lect['semester'] == $_SESSION['semester'] && $lect['day'] == 'Tuesday' && $lect['starttime'] == '12:00:00') {
-                                    echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br>::" . $lect['venue'];
+                                    echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br><hr>::" . $lect['tutor'] . "<br>::" . $lect['venue'];
                                 } else {
                                 }
                             ?>
@@ -211,35 +211,35 @@
                     <td class="bg-warning text-success lunch"><b> <br>U</b></td>
                     <td> <?php foreach ($timetableresult as $lect) : ?>
                             <?php if ($lect['course'] == $_SESSION['currentcourse'] && $lect['yearofstudy'] == $_SESSION['yearofstudy'] && $lect['semester'] == $_SESSION['semester'] && $lect['day'] == 'Tuesday' && $lect['starttime'] == '02:00:00') {
-                                    echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br>::" . $lect['venue'];
+                                    echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br><hr>::" . $lect['tutor'] . "<br>::" . $lect['venue'];
                                 } else {
                                 }
                             ?>
                         <?php endforeach; ?></td>
                     <td> <?php foreach ($timetableresult as $lect) : ?>
                             <?php if ($lect['course'] == $_SESSION['currentcourse'] && $lect['yearofstudy'] == $_SESSION['yearofstudy'] && $lect['semester'] == $_SESSION['semester'] && $lect['day'] == 'Tuesday' && $lect['starttime'] == '03:00:00') {
-                                    echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br>::" . $lect['venue'];
+                                    echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br><hr>::" . $lect['tutor'] . "<br>::" . $lect['venue'];
                                 } else {
                                 }
                             ?>
                         <?php endforeach; ?></td>
                     <td> <?php foreach ($timetableresult as $lect) : ?>
                             <?php if ($lect['course'] == $_SESSION['currentcourse'] && $lect['yearofstudy'] == $_SESSION['yearofstudy'] && $lect['semester'] == $_SESSION['semester'] && $lect['day'] == 'Tuesday' && $lect['starttime'] == '04:00:00') {
-                                    echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br>::" . $lect['venue'];
+                                    echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br><hr>::" . $lect['tutor'] . "<br>::" . $lect['venue'];
                                 } else {
                                 }
                             ?>
                         <?php endforeach; ?></td>
                     <td> <?php foreach ($timetableresult as $lect) : ?>
                             <?php if ($lect['course'] == $_SESSION['currentcourse'] && $lect['yearofstudy'] == $_SESSION['yearofstudy'] && $lect['semester'] == $_SESSION['semester'] && $lect['day'] == 'Tuesday' && $lect['starttime'] == '05:00:00') {
-                                    echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br>::" . $lect['venue'];
+                                    echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br><hr>::" . $lect['tutor'] . "<br>::" . $lect['venue'];
                                 } else {
                                 }
                             ?>
                         <?php endforeach; ?></td>
                     <td> <?php foreach ($timetableresult as $lect) : ?>
                             <?php if ($lect['course'] == $_SESSION['currentcourse'] && $lect['yearofstudy'] == $_SESSION['yearofstudy'] && $lect['semester'] == $_SESSION['semester'] && $lect['day'] == 'Tuesday' && $lect['starttime'] == '06:00:00') {
-                                    echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br>::" . $lect['venue'];
+                                    echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br><hr>::" . $lect['tutor'] . "<br>::" . $lect['venue'];
                                 } else {
                                 }
                             ?>
@@ -249,42 +249,42 @@
                     <th><b>Wednesday</b></th>
                     <td> <?php foreach ($timetableresult as $lect) : ?>
                             <?php if ($lect['course'] == $_SESSION['currentcourse'] && $lect['yearofstudy'] == $_SESSION['yearofstudy'] && $lect['semester'] == $_SESSION['semester'] && $lect['day'] == 'Wednesday' && $lect['starttime'] == '07:00:00') {
-                                    echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br>::" . $lect['venue'];
+                                    echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br><hr>::" . $lect['tutor'] . "<br>::" . $lect['venue'];
                                 } else {
                                 }
                             ?>
                         <?php endforeach; ?></td>
                     <td> <?php foreach ($timetableresult as $lect) : ?>
                             <?php if ($lect['course'] == $_SESSION['currentcourse'] && $lect['yearofstudy'] == $_SESSION['yearofstudy'] && $lect['semester'] == $_SESSION['semester'] && $lect['day'] == 'Wednesday' && $lect['starttime'] == '08:00:00') {
-                                    echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br>::" . $lect['venue'];
+                                    echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br><hr>::" . $lect['tutor'] . "<br>::" . $lect['venue'];
                                 } else {
                                 }
                             ?>
                         <?php endforeach; ?></td>
                     <td> <?php foreach ($timetableresult as $lect) : ?>
                             <?php if ($lect['course'] == $_SESSION['currentcourse'] && $lect['yearofstudy'] == $_SESSION['yearofstudy'] && $lect['semester'] == $_SESSION['semester'] && $lect['day'] == 'Wednesday' && $lect['starttime'] == '09:00:00') {
-                                    echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br>::" . $lect['venue'];
+                                    echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br><hr>::" . $lect['tutor'] . "<br>::" . $lect['venue'];
                                 } else {
                                 }
                             ?>
                         <?php endforeach; ?></td>
                     <td> <?php foreach ($timetableresult as $lect) : ?>
                             <?php if ($lect['course'] == $_SESSION['currentcourse'] && $lect['yearofstudy'] == $_SESSION['yearofstudy'] && $lect['semester'] == $_SESSION['semester'] && $lect['day'] == 'Wednesday' && $lect['starttime'] == '10:00:00') {
-                                    echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br>::" . $lect['venue'];
+                                    echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br><hr>::" . $lect['tutor'] . "<br>::" . $lect['venue'];
                                 } else {
                                 }
                             ?>
                         <?php endforeach; ?> </td>
                     <td> <?php foreach ($timetableresult as $lect) : ?>
                             <?php if ($lect['course'] == $_SESSION['currentcourse'] && $lect['yearofstudy'] == $_SESSION['yearofstudy'] && $lect['semester'] == $_SESSION['semester'] && $lect['day'] == 'Wednesday' && $lect['starttime'] == '11:00:00') {
-                                    echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br>::" . $lect['venue'];
+                                    echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br><hr>::" . $lect['tutor'] . "<br>::" . $lect['venue'];
                                 } else {
                                 }
                             ?>
                         <?php endforeach; ?> </td>
                     <td> <?php foreach ($timetableresult as $lect) : ?>
                             <?php if ($lect['course'] == $_SESSION['currentcourse'] && $lect['yearofstudy'] == $_SESSION['yearofstudy'] && $lect['semester'] == $_SESSION['semester'] && $lect['day'] == 'Wednesday' && $lect['starttime'] == '12:00:00') {
-                                    echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br>::" . $lect['venue'];
+                                    echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br><hr>::" . $lect['tutor'] . "<br>::" . $lect['venue'];
                                 } else {
                                 }
                             ?>
@@ -292,35 +292,35 @@
                     <td class="bg-warning text-success lunch"><b> <br>N</b></td>
                     <td> <?php foreach ($timetableresult as $lect) : ?>
                             <?php if ($lect['course'] == $_SESSION['currentcourse'] && $lect['yearofstudy'] == $_SESSION['yearofstudy'] && $lect['semester'] == $_SESSION['semester'] && $lect['day'] == 'Wednesday' && $lect['starttime'] == '02:00:00') {
-                                    echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br>::" . $lect['venue'];
+                                    echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br><hr>::" . $lect['tutor'] . "<br>::" . $lect['venue'];
                                 } else {
                                 }
                             ?>
                         <?php endforeach; ?></td>
                     <td> <?php foreach ($timetableresult as $lect) : ?>
                             <?php if ($lect['course'] == $_SESSION['currentcourse'] && $lect['yearofstudy'] == $_SESSION['yearofstudy'] && $lect['semester'] == $_SESSION['semester'] && $lect['day'] == 'Wednesday' && $lect['starttime'] == '03:00:00') {
-                                    echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br>::" . $lect['venue'];
+                                    echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br><hr>::" . $lect['tutor'] . "<br>::" . $lect['venue'];
                                 } else {
                                 }
                             ?>
                         <?php endforeach; ?></td>
                     <td> <?php foreach ($timetableresult as $lect) : ?>
                             <?php if ($lect['course'] == $_SESSION['currentcourse'] && $lect['yearofstudy'] == $_SESSION['yearofstudy'] && $lect['semester'] == $_SESSION['semester'] && $lect['day'] == 'Wednesday' && $lect['starttime'] == '04:00:00') {
-                                    echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br>::" . $lect['venue'];
+                                    echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br><hr>::" . $lect['tutor'] . "<br>::" . $lect['venue'];
                                 } else {
                                 }
                             ?>
                         <?php endforeach; ?></td>
                     <td> <?php foreach ($timetableresult as $lect) : ?>
                             <?php if ($lect['course'] == $_SESSION['currentcourse'] && $lect['yearofstudy'] == $_SESSION['yearofstudy'] && $lect['semester'] == $_SESSION['semester'] && $lect['day'] == 'Wednesday' && $lect['starttime'] == '05:00:00') {
-                                    echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br>::" . $lect['venue'];
+                                    echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br><hr>::" . $lect['tutor'] . "<br>::" . $lect['venue'];
                                 } else {
                                 }
                             ?>
                         <?php endforeach; ?></td>
                     <td> <?php foreach ($timetableresult as $lect) : ?>
                             <?php if ($lect['course'] == $_SESSION['currentcourse'] && $lect['yearofstudy'] == $_SESSION['yearofstudy'] && $lect['semester'] == $_SESSION['semester'] && $lect['day'] == 'Wednesday' && $lect['starttime'] == '06:00:00') {
-                                    echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br>::" . $lect['venue'];
+                                    echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br><hr>::" . $lect['tutor'] . "<br>::" . $lect['venue'];
                                 } else {
                                 }
                             ?>
@@ -330,42 +330,42 @@
                     <th><b>Thursday</b></th>
                     <td> <?php foreach ($timetableresult as $lect) : ?>
                             <?php if ($lect['course'] == $_SESSION['currentcourse'] && $lect['yearofstudy'] == $_SESSION['yearofstudy'] && $lect['semester'] == $_SESSION['semester'] && $lect['day'] == 'Thursday' && $lect['starttime'] == '07:00:00') {
-                                    echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br>::" . $lect['venue'];
+                                    echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br><hr>::" . $lect['tutor'] . "<br>::" . $lect['venue'];
                                 } else {
                                 }
                             ?>
                         <?php endforeach; ?></td>
                     <td> <?php foreach ($timetableresult as $lect) : ?>
                             <?php if ($lect['course'] == $_SESSION['currentcourse'] && $lect['yearofstudy'] == $_SESSION['yearofstudy'] && $lect['semester'] == $_SESSION['semester'] && $lect['day'] == 'Thursday' && $lect['starttime'] == '08:00:00') {
-                                    echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br>::" . $lect['venue'];
+                                    echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br><hr>::" . $lect['tutor'] . "<br>::" . $lect['venue'];
                                 } else {
                                 }
                             ?>
                         <?php endforeach; ?></td>
                     <td> <?php foreach ($timetableresult as $lect) : ?>
                             <?php if ($lect['course'] == $_SESSION['currentcourse'] && $lect['yearofstudy'] == $_SESSION['yearofstudy'] && $lect['semester'] == $_SESSION['semester'] && $lect['day'] == 'Thursday' && $lect['starttime'] == '09:00:00') {
-                                    echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br>::" . $lect['venue'];
+                                    echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br><hr>::" . $lect['tutor'] . "<br>::" . $lect['venue'];
                                 } else {
                                 }
                             ?>
                         <?php endforeach; ?></td>
                     <td> <?php foreach ($timetableresult as $lect) : ?>
                             <?php if ($lect['course'] == $_SESSION['currentcourse'] && $lect['yearofstudy'] == $_SESSION['yearofstudy'] && $lect['semester'] == $_SESSION['semester'] && $lect['day'] == 'Thursday' && $lect['starttime'] == '10:00:00') {
-                                    echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br>::" . $lect['venue'];
+                                    echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br><hr>::" . $lect['tutor'] . "<br>::" . $lect['venue'];
                                 } else {
                                 }
                             ?>
                         <?php endforeach; ?> </td>
                     <td> <?php foreach ($timetableresult as $lect) : ?>
                             <?php if ($lect['course'] == $_SESSION['currentcourse'] && $lect['yearofstudy'] == $_SESSION['yearofstudy'] && $lect['semester'] == $_SESSION['semester'] && $lect['day'] == 'Thursday' && $lect['starttime'] == '11:00:00') {
-                                    echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br>::" . $lect['venue'];
+                                    echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br><hr>::" . $lect['tutor'] . "<br>::" . $lect['venue'];
                                 } else {
                                 }
                             ?>
                         <?php endforeach; ?> </td>
                     <td> <?php foreach ($timetableresult as $lect) : ?>
                             <?php if ($lect['course'] == $_SESSION['currentcourse'] && $lect['yearofstudy'] == $_SESSION['yearofstudy'] && $lect['semester'] == $_SESSION['semester'] && $lect['day'] == 'Thursday' && $lect['starttime'] == '12:00:00') {
-                                    echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br>::" . $lect['venue'];
+                                    echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br><hr>::" . $lect['tutor'] . "<br>::" . $lect['venue'];
                                 } else {
                                 }
                             ?>
@@ -373,35 +373,35 @@
                     <td class="bg-warning text-success lunch"><b> <br>N</b></td>
                     <td> <?php foreach ($timetableresult as $lect) : ?>
                             <?php if ($lect['course'] == $_SESSION['currentcourse'] && $lect['yearofstudy'] == $_SESSION['yearofstudy'] && $lect['semester'] == $_SESSION['semester'] && $lect['day'] == 'Thursday' && $lect['starttime'] == '02:00:00') {
-                                    echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br>::" . $lect['venue'];
+                                    echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br><hr>::" . $lect['tutor'] . "<br>::" . $lect['venue'];
                                 } else {
                                 }
                             ?>
                         <?php endforeach; ?> </td>
                     <td> <?php foreach ($timetableresult as $lect) : ?>
                             <?php if ($lect['course'] == $_SESSION['currentcourse'] && $lect['yearofstudy'] == $_SESSION['yearofstudy'] && $lect['semester'] == $_SESSION['semester'] && $lect['day'] == 'Thursday' && $lect['starttime'] == '03:00:00') {
-                                    echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br>::" . $lect['venue'];
+                                    echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br><hr>::" . $lect['tutor'] . "<br>::" . $lect['venue'];
                                 } else {
                                 }
                             ?>
                         <?php endforeach; ?> </td>
                     <td> <?php foreach ($timetableresult as $lect) : ?>
                             <?php if ($lect['course'] == $_SESSION['currentcourse'] && $lect['yearofstudy'] == $_SESSION['yearofstudy'] && $lect['semester'] == $_SESSION['semester'] && $lect['day'] == 'Thursday' && $lect['starttime'] == '04:00:00') {
-                                    echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br>::" . $lect['venue'];
+                                    echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br><hr>::" . $lect['tutor'] . "<br>::" . $lect['venue'];
                                 } else {
                                 }
                             ?>
                         <?php endforeach; ?> </td>
                     <td> <?php foreach ($timetableresult as $lect) : ?>
                             <?php if ($lect['course'] == $_SESSION['currentcourse'] && $lect['yearofstudy'] == $_SESSION['yearofstudy'] && $lect['semester'] == $_SESSION['semester'] && $lect['day'] == 'Thursday' && $lect['starttime'] == '05:00:00') {
-                                    echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br>::" . $lect['venue'];
+                                    echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br><hr>::" . $lect['tutor'] . "<br>::" . $lect['venue'];
                                 } else {
                                 }
                             ?>
                         <?php endforeach; ?> </td>
                     <td> <?php foreach ($timetableresult as $lect) : ?>
                             <?php if ($lect['course'] == $_SESSION['currentcourse'] && $lect['yearofstudy'] == $_SESSION['yearofstudy'] && $lect['semester'] == $_SESSION['semester'] && $lect['day'] == 'Thursday' && $lect['starttime'] == '06:00:00') {
-                                    echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br>::" . $lect['venue'];
+                                    echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br><hr>::" . $lect['tutor'] . "<br>::" . $lect['venue'];
                                 } else {
                                 }
                             ?>
@@ -411,42 +411,42 @@
                     <th><b>Friday</b></th>
                     <td> <?php foreach ($timetableresult as $lect) : ?>
                             <?php if ($lect['course'] == $_SESSION['currentcourse'] && $lect['yearofstudy'] == $_SESSION['yearofstudy'] && $lect['semester'] == $_SESSION['semester'] && $lect['day'] == 'Friday' && $lect['starttime'] == '07:00:00') {
-                                    echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br>::" . $lect['venue'];
+                                    echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br><hr>::" . $lect['tutor'] . "<br>::" . $lect['venue'];
                                 } else {
                                 }
                             ?>
                         <?php endforeach; ?></td>
                     <td> <?php foreach ($timetableresult as $lect) : ?>
                             <?php if ($lect['course'] == $_SESSION['currentcourse'] && $lect['yearofstudy'] == $_SESSION['yearofstudy'] && $lect['semester'] == $_SESSION['semester'] && $lect['day'] == 'Friday' && $lect['starttime'] == '08:00:00') {
-                                    echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br>::" . $lect['venue'];
+                                    echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br><hr>::" . $lect['tutor'] . "<br>::" . $lect['venue'];
                                 } else {
                                 }
                             ?>
                         <?php endforeach; ?></td>
                     <td> <?php foreach ($timetableresult as $lect) : ?>
                             <?php if ($lect['course'] == $_SESSION['currentcourse'] && $lect['yearofstudy'] == $_SESSION['yearofstudy'] && $lect['semester'] == $_SESSION['semester'] && $lect['day'] == 'Friday' && $lect['starttime'] == '09:00:00') {
-                                    echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br>::" . $lect['venue'];
+                                    echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br><hr>::" . $lect['tutor'] . "<br>::" . $lect['venue'];
                                 } else {
                                 }
                             ?>
                         <?php endforeach; ?></td>
                     <td> <?php foreach ($timetableresult as $lect) : ?>
                             <?php if ($lect['course'] == $_SESSION['currentcourse'] && $lect['yearofstudy'] == $_SESSION['yearofstudy'] && $lect['semester'] == $_SESSION['semester'] && $lect['day'] == 'Friday' && $lect['starttime'] == '10:00:00') {
-                                    echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br>::" . $lect['venue'];
+                                    echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br><hr>::" . $lect['tutor'] . "<br>::" . $lect['venue'];
                                 } else {
                                 }
                             ?>
                         <?php endforeach; ?> </td>
                     <td> <?php foreach ($timetableresult as $lect) : ?>
                             <?php if ($lect['course'] == $_SESSION['currentcourse'] && $lect['yearofstudy'] == $_SESSION['yearofstudy'] && $lect['semester'] == $_SESSION['semester'] && $lect['day'] == 'Friday' && $lect['starttime'] == '11:00:00') {
-                                    echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br>::" . $lect['venue'];
+                                    echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br><hr>::" . $lect['tutor'] . "<br>::" . $lect['venue'];
                                 } else {
                                 }
                             ?>
                         <?php endforeach; ?> </td>
                     <td> <?php foreach ($timetableresult as $lect) : ?>
                             <?php if ($lect['course'] == $_SESSION['currentcourse'] && $lect['yearofstudy'] == $_SESSION['yearofstudy'] && $lect['semester'] == $_SESSION['semester'] && $lect['day'] == 'Friday' && $lect['starttime'] == '12:00:00') {
-                                    echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br>::" . $lect['venue'];
+                                    echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br><hr>::" . $lect['tutor'] . "<br>::" . $lect['venue'];
                                 } else {
                                 }
                             ?>
@@ -454,35 +454,35 @@
                     <td class="bg-warning text-success lunch"><b> <br>C</b></td>
                     <td> <?php foreach ($timetableresult as $lect) : ?>
                             <?php if ($lect['course'] == $_SESSION['currentcourse'] && $lect['yearofstudy'] == $_SESSION['yearofstudy'] && $lect['semester'] == $_SESSION['semester'] && $lect['day'] == 'Friday' && $lect['starttime'] == '02:00:00') {
-                                    echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br>::" . $lect['venue'];
+                                    echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br><hr>::" . $lect['tutor'] . "<br>::" . $lect['venue'];
                                 } else {
                                 }
                             ?>
                         <?php endforeach; ?> </td>
                     <td> <?php foreach ($timetableresult as $lect) : ?>
                             <?php if ($lect['course'] == $_SESSION['currentcourse'] && $lect['yearofstudy'] == $_SESSION['yearofstudy'] && $lect['semester'] == $_SESSION['semester'] && $lect['day'] == 'Friday' && $lect['starttime'] == '03:00:00') {
-                                    echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br>::" . $lect['venue'];
+                                    echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br><hr>::" . $lect['tutor'] . "<br>::" . $lect['venue'];
                                 } else {
                                 }
                             ?>
                         <?php endforeach; ?> </td>
                     <td> <?php foreach ($timetableresult as $lect) : ?>
                             <?php if ($lect['course'] == $_SESSION['currentcourse'] && $lect['yearofstudy'] == $_SESSION['yearofstudy'] && $lect['semester'] == $_SESSION['semester'] && $lect['day'] == 'Friday' && $lect['starttime'] == '04:00:00') {
-                                    echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br>::" . $lect['venue'];
+                                    echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br><hr>::" . $lect['tutor'] . "<br>::" . $lect['venue'];
                                 } else {
                                 }
                             ?>
                         <?php endforeach; ?> </td>
                     <td> <?php foreach ($timetableresult as $lect) : ?>
                             <?php if ($lect['course'] == $_SESSION['currentcourse'] && $lect['yearofstudy'] == $_SESSION['yearofstudy'] && $lect['semester'] == $_SESSION['semester'] && $lect['day'] == 'Friday' && $lect['starttime'] == '05:00:00') {
-                                    echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br>::" . $lect['venue'];
+                                    echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br><hr>::" . $lect['tutor'] . "<br>::" . $lect['venue'];
                                 } else {
                                 }
                             ?>
                         <?php endforeach; ?> </td>
                     <td> <?php foreach ($timetableresult as $lect) : ?>
                             <?php if ($lect['course'] == $_SESSION['currentcourse'] && $lect['yearofstudy'] == $_SESSION['yearofstudy'] && $lect['semester'] == $_SESSION['semester'] && $lect['day'] == 'Friday' && $lect['starttime'] == '06:00:00') {
-                                    echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br>::" . $lect['venue'];
+                                    echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br><hr>::" . $lect['tutor'] . "<br>::" . $lect['venue'];
                                 } else {
                                 }
                             ?>
@@ -492,42 +492,42 @@
                     <th><b>Saturday</b></th>
                     <td> <?php foreach ($timetableresult as $lect) : ?>
                             <?php if ($lect['course'] == $_SESSION['currentcourse'] && $lect['yearofstudy'] == $_SESSION['yearofstudy'] && $lect['semester'] == $_SESSION['semester'] && $lect['day'] == 'Saturday' && $lect['starttime'] == '07:00:00') {
-                                    echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br>::" . $lect['venue'];
+                                    echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br><hr>::" . $lect['tutor'] . "<br>::" . $lect['venue'];
                                 } else {
                                 }
                             ?>
                         <?php endforeach; ?></td>
                     <td> <?php foreach ($timetableresult as $lect) : ?>
                             <?php if ($lect['course'] == $_SESSION['currentcourse'] && $lect['yearofstudy'] == $_SESSION['yearofstudy'] && $lect['semester'] == $_SESSION['semester'] && $lect['day'] == 'Saturday' && $lect['starttime'] == '08:00:00') {
-                                    echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br>::" . $lect['venue'];
+                                    echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br><hr>::" . $lect['tutor'] . "<br>::" . $lect['venue'];
                                 } else {
                                 }
                             ?>
                         <?php endforeach; ?></td>
                     <td> <?php foreach ($timetableresult as $lect) : ?>
                             <?php if ($lect['course'] == $_SESSION['currentcourse'] && $lect['yearofstudy'] == $_SESSION['yearofstudy'] && $lect['semester'] == $_SESSION['semester'] && $lect['day'] == 'Saturday' && $lect['starttime'] == '09:00:00') {
-                                    echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br>::" . $lect['venue'];
+                                    echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br><hr>::" . $lect['tutor'] . "<br>::" . $lect['venue'];
                                 } else {
                                 }
                             ?>
                         <?php endforeach; ?></td>
                     <td> <?php foreach ($timetableresult as $lect) : ?>
                             <?php if ($lect['course'] == $_SESSION['currentcourse'] && $lect['yearofstudy'] == $_SESSION['yearofstudy'] && $lect['semester'] == $_SESSION['semester'] && $lect['day'] == 'Saturday' && $lect['starttime'] == '10:00:00') {
-                                    echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br>::" . $lect['venue'];
+                                    echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br><hr>::" . $lect['tutor'] . "<br>::" . $lect['venue'];
                                 } else {
                                 }
                             ?>
                         <?php endforeach; ?> </td>
                     <td> <?php foreach ($timetableresult as $lect) : ?>
                             <?php if ($lect['course'] == $_SESSION['currentcourse'] && $lect['yearofstudy'] == $_SESSION['yearofstudy'] && $lect['semester'] == $_SESSION['semester'] && $lect['day'] == 'Saturday' && $lect['starttime'] == '11:00:00') {
-                                    echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br>::" . $lect['venue'];
+                                    echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br><hr>::" . $lect['tutor'] . "<br>::" . $lect['venue'];
                                 } else {
                                 }
                             ?>
                         <?php endforeach; ?> </td>
                     <td> <?php foreach ($timetableresult as $lect) : ?>
                             <?php if ($lect['course'] == $_SESSION['currentcourse'] && $lect['yearofstudy'] == $_SESSION['yearofstudy'] && $lect['semester'] == $_SESSION['semester'] && $lect['day'] == 'Saturday' && $lect['starttime'] == '12:00:00') {
-                                    echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br>::" . $lect['venue'];
+                                    echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br><hr>::" . $lect['tutor'] . "<br>::" . $lect['venue'];
                                 } else {
                                 }
                             ?>
@@ -535,35 +535,35 @@
                     <td class="bg-warning text-success lunch"><b> <br>H</b></td>
                     <td> <?php foreach ($timetableresult as $lect) : ?>
                             <?php if ($lect['course'] == $_SESSION['currentcourse'] && $lect['yearofstudy'] == $_SESSION['yearofstudy'] && $lect['semester'] == $_SESSION['semester'] && $lect['day'] == 'Saturday' && $lect['starttime'] == '02:00:00') {
-                                    echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br>::" . $lect['venue'];
+                                    echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br><hr>::" . $lect['tutor'] . "<br>::" . $lect['venue'];
                                 } else {
                                 }
                             ?>
                         <?php endforeach; ?> </td>
                     <td> <?php foreach ($timetableresult as $lect) : ?>
                             <?php if ($lect['course'] == $_SESSION['currentcourse'] && $lect['yearofstudy'] == $_SESSION['yearofstudy'] && $lect['semester'] == $_SESSION['semester'] && $lect['day'] == 'Saturday' && $lect['starttime'] == '03:00:00') {
-                                    echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br>::" . $lect['venue'];
+                                    echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br><hr>::" . $lect['tutor'] . "<br>::" . $lect['venue'];
                                 } else {
                                 }
                             ?>
                         <?php endforeach; ?> </td>
                     <td> <?php foreach ($timetableresult as $lect) : ?>
                             <?php if ($lect['course'] == $_SESSION['currentcourse'] && $lect['yearofstudy'] == $_SESSION['yearofstudy'] && $lect['semester'] == $_SESSION['semester'] && $lect['day'] == 'Saturday' && $lect['starttime'] == '04:00:00') {
-                                    echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br>::" . $lect['venue'];
+                                    echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br><hr>::" . $lect['tutor'] . "<br>::" . $lect['venue'];
                                 } else {
                                 }
                             ?>
                         <?php endforeach; ?> </td>
                     <td> <?php foreach ($timetableresult as $lect) : ?>
                             <?php if ($lect['course'] == $_SESSION['currentcourse'] && $lect['yearofstudy'] == $_SESSION['yearofstudy'] && $lect['semester'] == $_SESSION['semester'] && $lect['day'] == 'Saturday' && $lect['starttime'] == '05:00:00') {
-                                    echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br>::" . $lect['venue'];
+                                    echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br><hr>::" . $lect['tutor'] . "<br>::" . $lect['venue'];
                                 } else {
                                 }
                             ?>
                         <?php endforeach; ?> </td>
                     <td> <?php foreach ($timetableresult as $lect) : ?>
                             <?php if ($lect['course'] == $_SESSION['currentcourse'] && $lect['yearofstudy'] == $_SESSION['yearofstudy'] && $lect['semester'] == $_SESSION['semester'] && $lect['day'] == 'Saturday' && $lect['starttime'] == '06:00:00') {
-                                    echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br>::" . $lect['venue'];
+                                    echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br><hr>::" . $lect['tutor'] . "<br>::" . $lect['venue'];
                                 } else {
                                 }
                             ?>
