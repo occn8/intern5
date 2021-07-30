@@ -682,6 +682,10 @@ if (isset($_POST['add_lecture'])) {
 	$if_result2 = mysqli_query($connect, $if_unit_overuse); // if unit has been allocated 3x
 	$if_tutor_unit = "SELECT * FROM timetable WHERE yearofstudy='$yearofstudy' and semester='$semester' and course='$course' and tutor='$tutor' and unit!='$unit'";
 	$if_result3 = mysqli_query($connect, $if_tutor_unit); // if tutor has been allocated more than 1 unit
+	$if_tutor_lecture = "SELECT * FROM timetable WHERE semester='$semester' and course='$course' and tutor='$tutor' and day='$day' and starttime='$starttime'";
+	$if_result5 = mysqli_query($connect, $if_tutor_lecture); // if tutor has lecture with another year
+	$if_room_inuse = "SELECT * FROM timetable WHERE semester='$semester' and course='$course' and day='$day' and starttime='$starttime' and venue='$venue'";
+	$if_result4 = mysqli_query($connect, $if_room_inuse); // if Room is in use
 
 	if (empty($tutor)) {
 		echo "<script>alert('Get serious');</script>";
@@ -699,6 +703,26 @@ if (isset($_POST['add_lecture'])) {
 	if (mysqli_num_rows($if_result3) > 0) {
 
 		array_push($errors, "Tutor <b>($tutor)</b> has already been allocated A Unit");
+	}
+	if (mysqli_num_rows($if_result4) > 0) {
+		if ($if_result4->num_rows > 0) {
+			$row = mysqli_fetch_assoc($if_result4);
+			$yr = $row['yearofstudy'];
+			$unt = $row['unit'];
+		} else {
+		}
+		
+		array_push($errors, "Room <b>($venue)</b> is in use by <b>(Year $yr):</b> unit <b>($unt)</b> ");
+	}
+	if (mysqli_num_rows($if_result5) > 0) {
+		if ($if_result5->num_rows > 0) {
+			$row = mysqli_fetch_assoc($if_result5);
+			$yr = $row['yearofstudy'];
+			$unt = $row['unit'];
+		} else {
+		}
+		
+		array_push($errors, "Tutor <b>($tutor)</b> has a lecture with <b>(Year $yr):</b> unit <b>($unt)</b> at this time");
 	}
 
 	if (count($errors) == 0) {
