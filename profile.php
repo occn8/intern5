@@ -144,20 +144,17 @@ require_once('config/user_detail.php');
                                             </div>
                                         </div>
 
-                                        <div class="col-md-4">
+                                        <div class="col-md-6">
                                             <div class="form-group">
                                                 <label for="course" class="text-black font-weight-bold">Course</label>
-                                                <select class="custom-select d-block w-100" name="course" id="course" required>
-                                                    <?php foreach ($courseresult as $course) : ?>
-                                                        <option><?php echo $course['name']; ?></option>
-                                                    <?php endforeach; ?>
-                                                </select>
+                                                <input type="text" class="form-control" id="course" name="course" placeholder="Course" value="<?php echo $course; ?>" disabled required>
+
                                                 <div class="invalid-feedback">
                                                     Valid course required.
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-md-4">
+                                        <div class="col-md-3">
                                             <div class="form-group">
                                                 <label class="text-black font-weight-bold">Phone</label>
                                                 <input type="text" name="phone" class="form-control" value="<?php echo $phone; ?>" required>
@@ -166,7 +163,7 @@ require_once('config/user_detail.php');
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-md-4">
+                                        <div class="col-md-3">
                                             <div class="form-group">
                                                 <label class="text-black font-weight-bold">Tutor No</label>
                                                 <input type="text" name="tutornum" class="form-control" value="<?php echo $tutornum; ?>" required>
@@ -233,7 +230,7 @@ require_once('config/user_detail.php');
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label for="uname" class="text-black font-weight-bold">Username </label>
-                                            <input type="text" class="form-control" id="uname" name="username" placeholder="Username" value="<?php echo $username; ?>" disabled required>
+                                            <input type="text" class="form-control" id="uname" name="username" placeholder="Username" value="<?php echo $username; ?>" disabled>
                                             <div class="invalid-feedback">
                                                 Valid username is required.
                                             </div>
@@ -242,7 +239,7 @@ require_once('config/user_detail.php');
                                     <div class="col-md-6">
                                         <div class="form-group ">
                                             <label for="email" class="text-black font-weight-bold">Email </label>
-                                            <input type="email" class="form-control" id="email" name="email" placeholder="Email" value="<?php echo $email; ?>" disabled required>
+                                            <input type="email" class="form-control" id="email" name="email" placeholder="Email" value="<?php echo $email; ?>" disabled>
                                             <div class="invalid-feedback">
                                                 Valid last Email is required.
                                             </div>
@@ -252,7 +249,7 @@ require_once('config/user_detail.php');
                                     <div class="col-md-5">
                                         <div class="form-group">
                                             <label class="text-black font-weight-bold">Registration No</label>
-                                            <input type="text" name="regnum" class="form-control" value="<?php echo $regnum; ?>" required>
+                                            <input type="text" name="regnum" class="form-control" value="<?php echo $regnum; ?>" disabled>
                                             <div class="invalid-feedback">
                                                 Please enter valid Registration Number.
                                             </div>
@@ -261,7 +258,7 @@ require_once('config/user_detail.php');
                                     <div class="col-md-5">
                                         <div class="form-group">
                                             <label class="text-black font-weight-bold">Student No</label>
-                                            <input type="text" name="studentnum" class="form-control" value="<?php echo $studentnum; ?>" required>
+                                            <input type="text" name="studentnum" class="form-control" value="<?php echo $studentnum; ?>" disabled>
                                             <div class="invalid-feedback">
                                                 Please enter valid Student Number.
                                             </div>
