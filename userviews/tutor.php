@@ -23,17 +23,17 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#timetable">
-                            <i class="bx bxs-time-five color-primary pr-3"></i> Time Table
+                            <i class="bx bxs-time-five color-primary pr-3"></i> Time Table Sem1
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#tutorials">
-                            <i class="bx bxs-book-open color-primary pr-3"></i> My Units
+                        <a class="nav-link" href="#timetable2">
+                            <i class="bx bxs-time-five color-primary pr-3"></i> Time Table Sem2
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#courses">
-                            <i class="bx bxs-group color-primary pr-3"></i> My Lectures
+                        <a class="nav-link" href="#courseunits">
+                            <i class="bx bxs-book-open color-primary pr-3"></i> My Lectures
                         </a>
                     </li>
                 </ul>

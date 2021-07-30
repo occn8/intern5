@@ -6,12 +6,12 @@
     </div>
 
     <?php foreach ($timetableresult as $lect) : ?>
-        <div class="col-lg-4">
+        <div>
             <?php if ($lect['course'] == $_SESSION['currentcourse'] && $lect['yearofstudy'] == $_SESSION['yearofstudy'] && $lect['semester'] == $_SESSION['semester']) {
-                echo "<div class=\"box-side mb-3 card-light p-2 radi shadow\">
+                echo "<div class=\"col-md-4 mb-3 card-light p-2 radi shadow\">
             <h4><a href=\"#\" class=\"prim\">" . $lect['unit'] . " </a></h4>
-            <h6 class=\"text-black\">Day :<a href=\"#\" >" . $lect['day'] . " </a></h6>
-            <h6 class=\"text-black\">Time :<a href=\"#\" >" . $lect['starttime'] . " </a></h6>
+            <h6 class=\"text-black\">Day :<a href=\"#\" >" . $lect['day'] . ' ' .  " </a> Time :<a href=\"#\" >" . $lect['starttime'] . " </a></h6>
+            <span><div class=\"text-black\">Year :<a href=\"#\" >" . $lect['yearofstudy'] . ' ' . " </a> Sem :<a href=\"#\" >" . $lect['semester'] . " </a></div></span>
                 </div>";
             } else {
             }

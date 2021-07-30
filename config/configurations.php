@@ -732,7 +732,7 @@ if (isset($_POST['add_lecture'])) {
 		} else {
 		}
 		
-		array_push($errors, "Tutor <b>($tutor)</b> has a lecture with <b>(Year $yr):</b> unit <b>($unt)</b> at this time");
+		array_push($errors, "Tutor <b>($tutor)</b> has <b>(Year $yr):</b> unit <b>($unt)</b> at this time");
 	}
 
 	if (count($errors) == 0) {

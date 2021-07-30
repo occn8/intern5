@@ -31,11 +31,7 @@
                             <i class="bx bxs-book-open color-primary pr-3"></i>My Lectures
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#courses">
-                            <i class="bx bx-library color-primary pr-3"></i>My Courses
-                        </a>
-                    </li>
+                  
                 </ul>
 
                 <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 pt-2 text-muted">
