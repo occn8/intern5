@@ -80,7 +80,7 @@
                     </div>
                 </div>
                 <br>
-                <button type="submit" class="btn btn-warning col-md-4 rounded-pill" name="add_venue"><b>Add Venue</b></button>
+                <button type="submit" class="btn btn-warning col-md-4 rounded-pill" style="background-color: #db2723;color:white;" name="add_venue"><b>Add Venue</b></button>
 
             </div>
         </form>
@@ -106,7 +106,7 @@
                         Enter Valid Venue code.
                     </div>
                 </div>
-                <button type="submit" class="btn btn-danger col-md-4 rounded-pill" name="delete_venue">Delete Venue</button>
+                <button type="submit" class="btn btn-danger col-md-4 rounded-pill" style="background-color: #db2723;color:white;" name="delete_venue">Delete Venue</button>
             </form>
         </div>
     </div>

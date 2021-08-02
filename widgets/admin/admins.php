@@ -116,7 +116,7 @@
 
                     </div><br>
                     <br>
-                    <button type="submit" class="btn btn-warning col-md-4 rounded-pill" name="register_admin"><b>Add Admin</b></button>
+                    <button type="submit" class="btn btn-warning col-md-4 rounded-pill" style="background-color: #db2723;color:white;" name="register_admin"><b>Add Admin</b></button>
 
                 </div>
         </form>
@@ -142,7 +142,7 @@
                     Please Enter Valid Admin Username.
                     </div>
                 </div>
-                <button type="submit" class="btn btn-danger col-md-4 rounded-pill" name="delete_admin">Delete Admin</button>
+                <button type="submit" class="btn btn-danger col-md-4 rounded-pill" style="background-color: #db2723;color:white;" name="delete_admin">Delete Admin</button>
             </form>
         </div>
     </div>

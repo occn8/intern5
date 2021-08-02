@@ -15,7 +15,7 @@
                         <!-- <div class="img"><img src="assets/img5.png" class="img-fluid" alt="Image"></div> -->
                         <div class="text pl-3">
                             <a href="#" class="category black">Lectures</a>
-                            <h3><a href="#">Emerging Trends in IT</a></h3>
+                            <h3><a class="prim" href="#">Emerging Trends in IT</a></h3>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum quidem totam exercitationem eveniet blanditiis nulla, et possimus, itaque alias maxime!
                             </p>
                             <p class="mb-0">
@@ -37,21 +37,21 @@
                         <!-- <div class="img"><img src="assets/img1.jpg" width="200" class="img-fluid" alt="Image"></div> -->
                         <div class="text pl-2">
                             <a href="" class="category black">Tutorial</a>
-                            <h5><a href="">Data Warehousing</a></h5>
+                            <h5><a class="prim" href="">Data Warehousing</a></h5>
                         </div>
                     </div>
                     <div class="d-flex card-light align-items-center mb-2 p-2 radi shadow">
                         <!-- <div class="img"><img src="assets/img1.jpg" width="180" class="img-fluid" alt="Image"></div> -->
                         <div class="text pl-2">
                             <a href=" " class="category black">Tutorial</a>
-                            <h5><a href="">Information Systems</a></h5>
+                            <h5><a class="prim" href="">Information Systems</a></h5>
                         </div>
                     </div>
                     <div class="d-flex card-light align-items-center p-2 radi shadow">
                         <!-- <div class="img"><img src="assets/img1.jpg" width="180" class="img-fluid" alt="Image"></div> -->
                         <div class="text pl-2">
                             <a href=" " class="category black">Tutorial</a>
-                            <h5><a href=" ">E-commerce</a></h5>
+                            <h5><a class="prim" href=" ">E-commerce</a></h5>
                         </div>
                     </div>
                 </div>

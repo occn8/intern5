@@ -17,12 +17,12 @@ require_once('config/configurations.php');
     <title>Log In</title>
 </head>
 
-<body>
+<body style="background-color: white;">
 
     <form class="needs-validation form-signin" method="post" action="sign_in.php" novalidate>
         <?php include('config/errors.php'); ?>
         <center>
-            <img class="mb-4" src="favicon.ico" alt="" height="100">
+            <img class="mb-4 mt-5" src="assets/favicon.ico" alt="" height="100">
             <h1 class="h3 mb-3 font-weight-normal">Log In</h1>
         </center>
         <div class="form-group">
@@ -47,8 +47,8 @@ require_once('config/configurations.php');
         </div><br>
 
         <center>
-            <button class="btn btn-lg btn-warning btn-block rounded-pill" name="signin_user" type="submit"><b>Sign in</b></button><br>
-            <small>Don't have an a/c </small> <a href="sign_up.php" class="color-link btn clr-bg rounded-pill font-size-20">Sign up Now</a>
+            <button class="btn btn-lg btn-warning btn-block rounded-pill" style="background-color: #db2723;color:white;" name="signin_user" type="submit"><b>Sign in</b></button><br>
+            <small>Don't have an A/C   . </small> <a href="sign_up.php" class="color-link btn clr-bg prim rounded-pill font-size-20"> Sign up Now</a>
             <p class="mt-5 mb-3 text-muted">&copy; <script>
                     document.write(new Date().getFullYear());
                 </script>

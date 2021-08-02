@@ -1,17 +1,17 @@
 <?php include('config/errors.php'); ?>
 <br>
-<div id="timetable">
-    <h2>Time Table</h2>
+<div id="gentimetable">
+    <h2>General Time Table</h2>
     <div class="row">
         <div class="col-md-4">
-            <button type="button" class="btn px-2 btn-warning rounded-pill px-5 " style="background-color: #db2723;color:white;" data-mdb-toggle="modal" data-mdb-target="#selectcoourse">
-               <b> Select Current Setting</b>
+            <button type="button" class="btn px-2 btn-warning text-black" data-mdb-toggle="modal" data-mdb-target="#selectcoourse">
+                Select Current Setting
             </button>
         </div>
         <div class="col-md-8 ">
             <h3 class="pt-0"><span>
                     <b>Course: </b><?php if (isset($_SESSION['currentcourse'])) {
-                                        echo "<span class=\"prim  p-1\">" . $_SESSION['currentcourse'] . "</span>";
+                                        echo "<span class=\"prim shadow p-1\">" . $_SESSION['currentcourse'] . "</span>";
                                     } else {
                                         echo " None";
                                     } ?>
@@ -29,17 +29,48 @@
             </h3>
         </div>
         <hr class="pt-1 mt-3">
-        <div class="col-md-12 pt-2">
-
-            <?php if (isset($_SESSION['currentcourse'])) {
-                echo '            <button type="button" class="btn rounded-pill px-" data-mdb-toggle="modal" style="background-color: #db2723;color:white;" data-mdb-target="#monday7"><b>Add Lecture</b></button>
-                ';
-            } else {
-            } ?>
-        </div>
 
     </div>
+    <?php
+echo "<table class='hoverTable'  cellpadding=10 border=1 align=center style='border-collapse:collapse;width:auto'>";
+echo "<tr><td width=50px>Time</td><td>Monday</td><td>Tuesday</td><td>Wednesday</td><td>Thursday</td><td>Friday</td><td>Saturday</td><td>Sunday</td></tr>";      
+for($i=8; $i<18;$i++)
+{
+    echo "<tr>";
+    $time="$i:00";
+    $j= $time+1;
+    $endtime="$j:00";
+    echo "<td align=center style='font-size:15px; color:#FF0000;'>".$time." - ".$endtime."</td>";
 
+    if($time=="13:00")
+    {
+        echo "<td width=80px align='center' style='font-size:15px; height:40px; color:#FF0000;'>Break </td>";
+    }
+    else
+    {
+        for($k=1;$k<=7;$k++)
+        {
+            if($k==1)
+                $day='Monday';
+            else if($k==2)
+                $day='Tuesday';
+            else if($k==3)
+                $day='Wednesday';
+            else if($k==4)
+                $day='Thursday';
+            else if($k==5)
+                $day='Friday';
+            else if($k==6)
+                $day='Saturday';
+            else    
+                $day='Sunday';
+
+            echo "<td width=80px align='center' style='font-size:15px; height:40px; color:#FF0000;' >Available</td>";
+        }
+    }
+    echo "</tr>";
+}
+?>
     <div class="table-responsive pt-5">
         <table id="tt" class="table table-striped">
             <thead>
@@ -63,13 +94,14 @@
                 <tr>
                     <th><b>Monday</b></th>
                     <td>
-                        <?php foreach ($timetableresult as $lect) : ?>
-                            <?php if ($lect['course'] == $_SESSION['currentcourse'] && $lect['yearofstudy'] == $_SESSION['yearofstudy'] && $lect['semester'] == $_SESSION['semester'] && $lect['day'] == 'Monday' && $lect['starttime'] == '07:00:00') {
-                                echo  "::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br><hr>::" . $lect['tutor'] . "<br>::" . $lect['venue'];
-                            } else {
-                            }
-                            ?>
-                        <?php endforeach; ?>
+                            <?php foreach ($timetableresult as $lect) : ?>
+                                <?php if ( $lect['semester'] == $_SESSION['semester'] && $lect['day'] == 'Monday' && $lect['starttime'] == '07:00:00') {
+                                    echo  "<div style=\"color:yellow;\">::" . $lect['id'] . "<br>::" . $lect['unit'] . "<br><hr>::" . $lect['tutor'] . "<br>::" . $lect['venue']. "</div>";
+                                } else {
+                                }
+                                ?>
+                            <?php endforeach; ?>
+                            
                     </td>
                     <td>
                         <?php foreach ($timetableresult as $lect) : ?>
@@ -664,7 +696,7 @@
                         Please Enter Valid Lecture Id.
                     </div>
                 </div>
-                <button type="submit" class="btn btn-danger col-md-4 rounded-pill" style="background-color: #db2723;color:white;" name="delete_lecture"><b>Delete Lecture</b></button>
+                <button type="submit" class="btn btn-danger col-md-4 rounded-pill" name="delete_lecture">Delete Lecture</button>
             </form>
         </div>
     </div>

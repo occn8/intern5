@@ -93,7 +93,7 @@ require_once('config/user_detail.php');
                                     </div><br>
                                     <br>
                                     <center>
-                                        <button class="btn btn-warning rounded-pill btn-block font-size-20 col-md-6" type="submit" name="save_profile"><b> Save Changes</b></button>
+                                        <button class="btn btn-warning rounded-pill btn-block font-size-20 col-md-6" style="background-color: #db2723;color:white;" type="submit" name="save_profile"><b> Save Changes</b></button>
                                     </center>
                                 </div>
                         </form>
@@ -197,7 +197,7 @@ require_once('config/user_detail.php');
                                     </div><br>
                                     <br>
                                     <center>
-                                        <button class="btn btn-warning rounded-pill btn-block font-size-20 col-md-6" type="submit" name="save_profile"><b> Save Changes</b></button>
+                                        <button class="btn btn-warning rounded-pill btn-block font-size-20 col-md-6" style="background-color: #db2723;color:white;" type="submit" name="save_profile"><b> Save Changes</b></button>
                                     </center>
                                 </div>
                         </form>
@@ -329,7 +329,7 @@ require_once('config/user_detail.php');
                                 </div><br>
                             </div><br>
                             <center>
-                                <button class="btn btn-warning rounded-pill btn-block font-size-20 col-md-6" type="submit" name="save_profile"><b> Save Changes</b></button>
+                                <button class="btn btn-warning rounded-pill btn-block font-size-20 col-md-6" style="background-color: #db2723;color:white;" type="submit" name="save_profile"><b> Save Changes</b></button>
                             </center>
                         </form>
                     </div>

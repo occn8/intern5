@@ -159,7 +159,7 @@
 
                 </div><br>
                 <br>
-                <button type="submit" class="btn btn-warning col-md-4 rounded-pill" name="register_tutor"><b>Add Tutor</b></button>
+                <button type="submit" class="btn btn-warning col-md-4 rounded-pill" style="background-color: #db2723;color:white;" name="register_tutor"><b>Add Tutor</b></button>
 
             </div>
         </form>
@@ -170,7 +170,7 @@
     <div class="container py-4 ">
         <div class="heading mb-4 border-bottom">
             <h2>
-                <Remove Tutor</h2>
+                Remove Tutor</h2>
         </div>
         <div class="mb-3 text-center">
             <div class="dg">
@@ -186,7 +186,7 @@
                         Please Enter Valid Tutor Number.
                     </div>
                 </div>
-                <button type="submit" class="btn btn-danger col-md-4 rounded-pill" name="delete_tutor">Delete Tutor</button>
+                <button type="submit" class="btn btn-danger col-md-4 rounded-pill" style="background-color: #db2723;color:white;" name="delete_tutor">Delete Tutor</button>
             </form>
         </div>
     </div>

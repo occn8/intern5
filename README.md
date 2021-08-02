@@ -20,6 +20,12 @@
 * [x] __Then__ Paste this URL __`http://localhost/intern5/index.php`__ to your browser
 * [x] __Done__
 
+## Admin 
+> __email__: admin@a.a
+> __password__:admin
+
+
+
 ### Screenshots
 __`Admin Home screen`__
 <img src="assets/images/adminHome.png" />

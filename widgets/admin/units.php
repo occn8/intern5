@@ -105,7 +105,7 @@
                     </div>
                 </div>
                 <br>
-                <button type="submit" class="btn btn-warning col-md-4 rounded-pill" name="add_unit"><b>Add Unit</b></button>
+                <button type="submit" class="btn btn-warning col-md-4 rounded-pill" style="background-color: #db2723;color:white;" name="add_unit"><b>Add Unit</b></button>
 
             </div>
         </form>
@@ -131,7 +131,7 @@
                         Enter Valid unit code.
                     </div>
                 </div>
-                <button type="submit" class="btn btn-danger col-md-4 rounded-pill" name="delete_unit">Delete Unit</button>
+                <button type="submit" class="btn btn-danger col-md-4 rounded-pill" style="background-color: #db2723;color:white;" name="delete_unit">Delete Unit</button>
             </form>
         </div>
     </div>

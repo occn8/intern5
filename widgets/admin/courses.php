@@ -59,7 +59,7 @@
                 </div>
 
                 <br>
-                <button type="submit" class="btn btn-warning col-md-4 rounded-pill" name="add_course"><b>Add Course</b></button>
+                <button type="submit" class="btn  col-md-4 rounded-pill prim" style="background-color: #db2723;color:white;" name="add_course"><b>Add Course</b></button>
 
             </div>
         </form>
@@ -85,7 +85,7 @@
                     Enter Valid Course name.
                     </div>
                 </div>
-                <button type="submit" class="btn btn-danger col-md-4 rounded-pill" name="delete_course">Delete Course</button>
+                <button type="submit" class="btn btn-danger col-md-4 rounded-pill" style="background-color: #db2723;color:white;" name="delete_course"><b>Delete Course</b></button>
             </form>
         </div>
     </div>

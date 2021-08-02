@@ -193,7 +193,7 @@
 
                     </div><br>
                     <br>
-                    <button type="submit" class="btn btn-warning col-md-4 rounded-pill" name="add_student"><b>Add Student</b></button>
+                    <button type="submit" class="btn btn-warning col-md-4 rounded-pill" style="background-color: #db2723;color:white;" name="add_student"><b>Add Student</b></button>
 
                 </div>
             </div>
@@ -220,7 +220,7 @@
                         Please Enter Valid Student Number.
                     </div>
                 </div>
-                <button type="submit" class="btn btn-danger col-md-4 rounded-pill" name="delete_student">Delete Student</button>
+                <button type="submit" class="btn btn-danger col-md-4 rounded-pill" style="background-color: #db2723;color:white;" name="delete_student">Delete Student</button>
             </form>
         </div>
     </div>
