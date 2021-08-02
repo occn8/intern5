@@ -11,17 +11,17 @@
         <div class="col-md-8 ">
             <h3 class="pt-0"><span>
                     <b>Course: </b><?php if (isset($_SESSION['currentcourse'])) {
-                                        echo "<span class=\"prim  p-1\">" . $_SESSION['currentcourse'] . "</span>";
+                                        echo "<span class=\"  p-1\">" . $_SESSION['currentcourse'] . "</span>";
                                     } else {
                                         echo " None";
                                     } ?>
                     <b>Yr:</b> <?php if (isset($_SESSION['yearofstudy'])) {
-                                    echo "<span class=\"prim p-1\">" . $_SESSION['yearofstudy'] . "</span>";
+                                    echo "<span class=\" p-1\">" . $_SESSION['yearofstudy'] . "</span>";
                                 } else {
                                     echo " None";
                                 } ?>
                     <b>Sem: </b> <?php if (isset($_SESSION['semester'])) {
-                                        echo "<span class=\"prim p-1\">" . $_SESSION['semester'] . "</span>";
+                                        echo "<span class=\" p-1\">" . $_SESSION['semester'] . "</span>";
                                     } else {
                                         echo " None";
                                     } ?>
@@ -634,7 +634,7 @@
                             </div><br>
                             <br>
                             <center>
-                                <button type="submit" class="btn btn-warning col-md-6 rounded-pill" name="select_course"><b>Select Course</b></button>
+                                <button type="submit" class="btn btn-warning col-md-6 rounded-pill" style="background-color: #db2723;color:white;" name="select_course"><b>Select Course</b></button>
                             </center>
                         </div>
                     </div>

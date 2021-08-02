@@ -77,7 +77,7 @@ include('widgets/header.php');
                         <div class="invalid-feedback">
                             Please write Message.
                         </div>
-                        <button type="submit" class="btn btn-warning rounded-pill my-2" name="make_comment"><b>Send Message</b></button>
+                        <button type="submit" class="btn btn-warning rounded-pill my-2" style="background-color: #db2723;color:white;" name="make_comment"><b>Send Message</b></button>
                     </form>
                 </div>
             </div>

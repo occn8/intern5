@@ -97,7 +97,7 @@
                             </div><br>
                             <br>
                             <center>
-                                <button type="submit" class="btn btn-warning col-md-4 rounded-pill" name="add_lecture"><b>Add Lecture</b></button>
+                                <button type="submit" class="btn btn-warning col-md-4 rounded-pill"  style="background-color: #db2723;color:white;" name="add_lecture"><b>Add Lecture</b></button>
                             </center>
                         </div>
                     </div>
