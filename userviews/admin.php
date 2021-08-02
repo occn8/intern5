@@ -42,11 +42,11 @@
                             <i class="bx bxs-time-five prim pr-3"></i> Time Table
                         </a>
                     </li>
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <a class="nav-link" href="#gentimetable">
                             <i class="bx bxs-time-five prim pr-3"></i>Gen Time Table
                         </a>
-                    </li>
+                    </li> -->
                     <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-2 mb-1 pt-2 text-muted">
                         <span class="prim font-weight-bold"> Users</span>
                     </h6>
